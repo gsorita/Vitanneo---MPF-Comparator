@@ -1,12 +1,28 @@
 ret = "";
 
 function main () {
-  //{!#LOOP_BEGIN.R182254#636454}
+  ret1 = new Array();
+  ret2 = new Array();
+  {!#LOOP_BEGIN.R182254#636454}
 	curdate = new Date("{!R182254.Date2__c}");
-	ret += getRet(curdate);
-  //{!#LOOP_END.R182254}
+	ret1.push(getRet(curdate));
+	ret2.push("");
+  {!#LOOP_END.R182254}
   
-  return ret.substring(0, ret.length - 1);
+  
+  
+  if (ret1.length <= 3) {
+	retString = ret1.toString();
+  } else {
+	var xinit = 0, xmid = Math.round(ret1.length / 2), xlast = ret1.length - 1;
+	ret2[xinit] = ret1[xinit];
+	ret2[xmid] = ret1[xmid];
+	ret2[xlast] =  ret1[xlast];	  
+	retString = ret2.toString();
+  }
+  
+  retString = retString.substring(0, retString.length - 1);
+  return retString.replace(/\,/g, "|");
 }
 
 function getRet(myDate) {

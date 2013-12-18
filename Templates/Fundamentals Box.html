@@ -57,120 +57,121 @@
                     </div>
                    
                 </td>
-                <td style="width: 150px; vertical-align: top;">
-                    <div>
+                <td style="width: 170px; vertical-align: top;">
+                    <div style="height: 93px;">
                         <h3 style="margin-top:3px" class="nomargin blue">Investment Allocation</h3>
-                        <img border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=50x50&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="vertical-align:middle;"> <!--&chdl=Bonds|Cash|Equity-->
+                        <img border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 8) { return '50x50'; } else { return '73x73'; } ]&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="vertical-align:middle; float: left;"> <!--&chdl=Bonds|Cash|Equity-->
     
                         <!--{!asset_allocation_legend}-->
                         
                         <style>
-                        #legend{
+                        .legend{
                             float: left;
-                            margin-top: -50px;
-                            margin-left: 43px;
                             border-spacing: 2px;
                             border-collapse: collapse;
-                            width: 162px;
-							height: 26px;
                         }
-						#legend div { 
+						.legend div { 
 							float: left;	
+							display: inline-block;
 						}
-                        #legend .color, #legend .text {
-                            margin: 1px 1px 0px 0px;
+                        .legend .color, #legend .text {
+                            margin: 1px 1px 0px 0px; 
                         }
-                        #legend .color {
+                        .legend .color {
                             height: 7px;
                             width: 7px;	
                         }
-                        #legend .text{
+                        .legend .text{
 							font-size: 4px;
-                            width: 51px;
+                            width: 42px;
                         }
+						.legend-item {
+							width: 53px;
+							vertical-align: middle;
+						}
                         </style>
-                        <div id="legend">
-                            <div style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                        <div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 8) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px;">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#990000;"></div>
                                 <div class="text">Greater China Equity  #EVAL[ if ('{!R182293.greater_china_equity#value}' != '') { return 'block'; } else { return 'none'; } ]</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.asian_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.asian_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ff6666;"></div>
                                 <div class="text">Asian Equity</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.australian_new_zealand_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.australian_new_zealand_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ffcccc;"></div>
                                 <div class="text">Australian/New Zealand<br>Equity</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.japan_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.japan_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#660066;"></div>
                                 <div class="text">Japan Equity</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.european_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.european_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#9999cc;"></div>
                                 <div class="text">European Equity</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.north_american_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.north_american_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ccccff;"></div>
                                 <div class="text">North American Equity</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.other_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.other_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#000099;"></div>
                                 <div class="text">Other Equity</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.greater_china_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#0000ff;"></div>
                                 <div class="text">Greater China Bonds</div>
                             </div>
 
-                            <div style="display: #EVAL[ if ('{!R182293.asian_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.asian_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ccffff;"></div>
                                 <div class="text">Asian Bonds</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.australian_new_zealand_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.australian_new_zealand_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#336600;"></div>
                                 <div class="text">Australian/New Zealand<br>Bonds</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.japan_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.japan_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#669900;"></div>
                                 <div class="text">Japan Bonds</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.european_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.european_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#cccc99;"></div>
                                 <div class="text">European Bonds</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.north_american_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.north_american_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#666633;"></div>
                                 <div class="text">North American Bonds</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.other_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.other_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#999966;"></div>
                                 <div class="text">Other Bonds</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.cash#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.cash#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ff6600;"></div>
                                 <div class="text">Cash</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.money_markets#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.money_markets#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ffcc33;"></div>
                                 <div class="text">Money Markets</div>
                             </div>
                             
-                            <div style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
+                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#663300;"></div>
                                 <div class="text">Other Cash Equivalents</div>
                             </div>  
