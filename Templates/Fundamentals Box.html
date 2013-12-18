@@ -60,18 +60,18 @@
                 <td style="width: 150px; vertical-align: top;">
                     <div>
                         <h3 style="margin-top:3px" class="nomargin blue">Investment Allocation</h3>
-                        <img border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 5) { return '50x50'; } else { return '85x85'; } ]&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="vertical-align:middle;"> <!--&chdl=Bonds|Cash|Equity-->
+                        <img border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=50x50&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="vertical-align:middle;"> <!--&chdl=Bonds|Cash|Equity-->
     
                         <!--{!asset_allocation_legend}-->
                         
                         <style>
                         #legend{
-							border:#000 1px solid;
                             float: left;
                             margin-top: -50px;
+                            margin-left: 43px;
                             border-spacing: 2px;
                             border-collapse: collapse;
-                            width: #EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 5) { return '162px'; } else { return '90px'; } ];
+                            width: 162px;
 							height: 26px;
                         }
 						#legend div { 
@@ -89,7 +89,7 @@
                             width: 51px;
                         }
                         </style>
-                        <div id="legend" style="margin-left: #EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 5) { return '43px'; } else { return '43px;'; } ];">
+                        <div id="legend">
                             <div style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#990000;"></div>
                                 <div class="text">Greater China Equity  #EVAL[ if ('{!R182293.greater_china_equity#value}' != '') { return 'block'; } else { return 'none'; } ]</div>
