@@ -19,7 +19,7 @@
                         <div style="height: 45px; width: 130px;"><p>{!R182293.investment_objective#value}</p></div>
                     </div>
     
-                    <div style="margin-top:-9px;">
+                    <div style="margin-top:-17px;">
                         <h3 class="blue">Fund Information</h3>
                         <table class="hor-zebra" style="width: 130px;border-collapse:collapse; margin-bottom:28px;">
                             <tr class="odd">
@@ -43,7 +43,7 @@
                                 <td align="right" style="color:#000">{!R182293.fund_expense_ratio#value}</td>
                             </tr>
                         </table>
-                        <div style="margin-top:-30px;">
+                        <div style="margin-top:-22px;">
                         <h3 class="blue">Investment Manager</h3>
                         <p style="background:#e7e7e8;width: 130px;">{!R182293.Investment_Managers__c}</p>
                         <h3 class="blue" style="margin-top:-5px">Risk Indicator</h3>
@@ -72,7 +72,8 @@
                         }
 						.legend div { 
 							float: left;	
-							display: inline-block;
+							display: table;
+							vertical-align: middle;
 						}
                         .legend .color, #legend .text {
                             margin: 1px 1px 0px 0px; 
@@ -84,10 +85,10 @@
                         .legend .text{
 							font-size: 4px;
                             width: 42px;
+							margin-top: 2px;
                         }
 						.legend-item {
 							width: 53px;
-							vertical-align: middle;
 						}
                         </style>
                         <div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 8) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px;">
@@ -138,7 +139,7 @@
                             
                             <div class="legend-item" style="display: #EVAL[ if ('{!R182293.australian_new_zealand_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#336600;"></div>
-                                <div class="text">Australian/New Zealand<br>Bonds</div>
+                                <div class="text">Hong Kong Bonds</div>
                             </div>
                             
                             <div class="legend-item" style="display: #EVAL[ if ('{!R182293.japan_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
@@ -168,7 +169,7 @@
                             
                             <div class="legend-item" style="display: #EVAL[ if ('{!R182293.money_markets#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
                                 <div class="color" style="background-color:#ffcc33;"></div>
-                                <div class="text">Money Markets</div>
+                                <div class="text">Money Market</div>
                             </div>
                             
                             <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
@@ -179,11 +180,11 @@
     
                     </div>
                     
-                    <div style="margin-top: -7px;">
+                    <div style="margin-top: -15px;">
                         <h3 class="blue">Fund Performance</h3>
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Annualised Return (p.a.)</center></td>
+                            <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Annualised Return (% p.a.)</center></td>
                         </tr>
                         <tr class="col odd">
                             <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">1 Month</td>
@@ -202,10 +203,10 @@
                         </table>
                     </div>
                     
-                    <div>
+                    <div style="margin-top: -19px;">
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" style="background-color:#929292; color:#fff"><center>{!R182293.index_fund}</center></td>
+                            <td colspan="5" style="background-color:#929292; color:#fff; height: 20px;"><center>{!R182293.index_fund} (% p.a.)</center></td>
                         </tr>
                         <tr class="col odd">
                             <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Month</td>
@@ -225,8 +226,8 @@
                     </div>
                     
                     <div>
-                        <h3 class="nomargin blue" style="margin: 3px; margin-top:0px">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chs=240x150&chd=t:0{!R182293.cdy#value}|0{!R182293.cdy_i#value}&chs=141x70&chxs=0N*cUSD,990066,6,0,lt|1N*cUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7"> <!--&chdl=Current|Index-->
+                        <h3 class="nomargin blue" style="margin-top: -10px;">Performance Chart</h3>
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:0{!R182293.cdy#value}|0{!R182293.cdy_i#value}&chs=161x70&chxs=0N*cUSD,990066,6,0,lt|1N*cUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px;"> <!--&chdl=Current|Index-->
     
                         <table style="margin-left:35px; margin-top:-2px;">
                             <tr>
