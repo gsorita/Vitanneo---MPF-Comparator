@@ -1,0 +1,1384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+<style>
+
+html, body {
+	font-family: arial;
+}
+
+.scheme-comparision{
+	margin-top: 30px;
+}
+.hr{
+	margin:1px;
+}
+.related1{
+	height: #EVAL[ (( {!#LOOP_BEGIN.R703123#310919(1)} {!R703123.max_funds} {!#LOOP_END.R703123} ) * 15 ) + 50]px !important;
+	/*height:300px;*/
+}
+.related2{
+	height: #EVAL[ (( {!#LOOP_BEGIN.R703123#310919(1)} {!R703123.max_funds} {!#LOOP_END.R703123} ) * 15 ) + 50]px !important;
+	/*height:300px;*/
+}
+.container{
+	float:left;
+	margin:0px 3px;
+	padding:2px;
+	width:310px;
+	border:1px solid #d1cfce;
+	display:block;
+	-webkit-box-shadow: 0 0 21px rgba(0,0,0,.14),inset 0 0 2px #fff;
+	-moz-box-shadow: 0 0 21px rgba(0,0,0,.14),inset 0 0 2px #fff;
+	box-shadow: 0 0 21px rgba(0,0,0,.14),inset 0 0 2px #fff;
+	color:#72727f;
+	font-size: 7px;
+} 
+.container table td{
+	height: 12px;
+	word-wrap: break-word;
+	font: 7px 4px Arial,serif;
+	margin:auto;
+}
+.current{
+	border:1px solid red;	
+}
+.titlepage{
+	text-align:top;
+	font-weight:bold;
+	font: 7px 4px Arial,serif;
+	height: 30px;
+	/*border-bottom: 1px solid #ed1c24;
+	border-left:1px solid #ed1c24;
+	border-right:1px solid #ed1c24;*/
+}
+.text{
+	font: 7px 4px Arial,serif;
+	margin:auto;
+}
+.text table{
+	width: 100%;
+}
+.name{
+	padding-top: 2% 0;
+	color: #000;
+	font-weight:bold;
+	text-align:center;
+	font-size: 8px;
+	
+	background: #ffffff; /* Old browsers 
+	background: -moz-linear-gradient(top, #666161 0%, #424242 100%); /* FF3.6+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666161), color-stop(100%,#424242)); /* Chrome,Safari4+ 
+	background: -webkit-linear-gradient(top, #666161 0%,#424242 100%); /* Chrome10+,Safari5.1+ 
+	background: -o-linear-gradient(top, #666161 0%,#424242 100%); /* Opera 11.10+ 
+	background: -ms-linear-gradient(top, #666161 0%,#424242 100%); /* IE10+ 
+	background: linear-gradient(to bottom, #666161 0%,#424242 100%); /* W3C *
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666161', endColorstr='#424242',GradientType=0 ); /* IE6-9 */
+	
+	/*border: 1px solid #333 !important;
+	*border:0 none !important;
+	_border:0 none !important;
+	border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	-webkit-border-radius: 4px !important;*/
+	
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #72727f;
+}
+.align{
+	margin:32px;
+}
+.text td{
+	min-height: 25px;
+}
+.data_table td, .data_table th{
+	font-size: 7px !important;
+	color:#72727f; 
+	padding:2%;
+	border:1px solid #e1e1e1;
+} 	
+.data_table td{ 
+	font-weight:normal; 
+	vertical-align:top; 
+}
+.data_table th{ 
+	font-weight:bold; 
+	border:1px solid #e1e1e1; 
+	vertical-align:middle; 
+	text-align: center; 
+}
+.fixed{
+	position: fixed;
+}
+.header{
+	top: 0;
+	background-color: #000;
+}
+.container .right{
+	text-align: right;	
+}
+.container .left{
+	text-align: left;
+}
+.fp_details{
+	margin-left: 400px;	
+	font-size: 20px;
+}
+.clear{
+	page-break-after:always;	
+}
+#eca-form, #eca-form table td, #eca-form table th {/* p1 */
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;	
+}
+#eca-form .right{
+	text-align: right;
+	float: right;
+	font-style:italic;
+}
+#eca-form .left{
+	text-align: left;
+	float: left;
+	font-style:italic;
+}
+#eca-form .title {
+	font-size: 14px;	
+	text-align: center;
+	margin: 0;
+}
+#left-mark {
+	border:1px solid black;
+	float:left;
+	width:200px;
+	padding:2px;
+	height: 60px;
+}
+#right-mark {
+	border:2px solid black;
+	float:right;
+	padding: 3px;
+	margin-top: 35px;
+	font-size: 15px;
+	font-weight: bold;	
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.headerbox-top{
+	background:#bfbfbf;
+	height:19px;
+	width:100%;
+}
+.headerbox-bottom{
+	background:#bfbfbf;
+	height:19px;
+	width:100%;
+	margin:0;
+}
+.form{
+	border:2px solid black;
+	padding:4px;
+	font-weight: bold;
+	float: right;
+	margin: 12px 5px;
+}
+.section {
+	font-weight: bold;
+}
+
+sup{
+	font-weight:normal;
+}
+
+.hr{
+	margin:24px 0px 12px 0px;
+	border: 1px #000 solid;
+}
+table.default {
+	width: 100%;	
+}/* p1 */
+.default td{
+	height: 25px;
+}
+.default .data {
+	border-bottom: 1px #000 solid;
+}
+.box {
+	border: 1px #000 solid;
+	padding: 5px 3px 17px;	
+}
+.table-display {
+	border: 1px #000 solid;
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-display th {
+	background: #bfbfbf;	
+	border-bottom:1px solid #000;
+}
+
+.table-display td{
+	border-bottom:1px solid #000;
+}
+
+ul{
+list-style-image:url('{!#HOSTED_FILE.842597}');
+}
+
+.tblThTd th td{
+	border-bottom:1px solid #000;
+}
+
+.no-border td{
+	border:none;
+	white-space:nowrap;
+}
+
+.data_table tr:even {
+  background-color: green;
+}
+
+.data_table tr:odd {
+  background-color: red;
+}
+
+.align{
+	margin:32px;
+	padding-left: 3px;
+	border-left: 1px solid #e1e1e1;
+}
+</style>
+
+<div id="header" style="width: 98.7%">
+<img src="{!#HOSTED_FILE.78008185}" width="40px" height="40px"/>
+    <span style="float: left; font-size:9px; vertical-align: top; margin-top: 0px;"><!--{!#TODAY}-->{!generated_date#value}
+    </span>
+        <div class="right" style="vertical-align:top; text-align: right; background-color:#004b5b; color:#fff; width:100%;">
+            <div style="margin:5px; margin-top: -1px;">
+                <span style="font-weight: bolder; font-size: 24px;padding: 0px; ">MPF ECA Form</span>
+               </div>
+        </div>
+</div>
+
+<div style="margin-top:250px; text-align:center">
+<p style="font-size:36px; font-weight:bold;">{!_b__other_name_#value} {!surname#value}</p>
+<p style="margin-top:-20px;">Client</p>
+</div>
+
+<div style=" text-align:center">
+<p style="font-size:16px;">Adviser: {!R230376.firstName#value} {!R230376.surname#value}</p>
+</div>
+
+<!--<h1 style="text-align: center; font-size: 50px; margin:  100px auto 400px;">MPF ECA Form</h1>
+<p>Adviser: {!R230376.firstName#value} {!R230376.surname#value}</p>
+<p>Client: {!R387392.first_name#value} {!R387392.surname#value}</p>
+<p>Date Generated: {!#TODAY}</p>-->
+<!--<h1>New Scheme: #EVAL[( ("{!transfer_to_#code}" == "8.1") ? "{!R361366.Scheme_Name__c#value}" : ( ("{!transfer_to_#code}" == "8.2") ? "{!R363157.Scheme_Name__c#value}" : "n/a") )] </h1>-->
+
+<div id="mfpFooter" style="margin-top:453px;">
+	<table width="100%">
+			<td width="90%" style="font-size:6px"><p style="align:justify"><b>Important: </b><span style="color:#aaa">Any advice provided here is of a general nature and does not take into account your 
+			individual financial situation, objectives or needs. It is not guaranteed to be accurate or complete. Information 
+			has been prepared without taking into account your individual financial objectives, situation or needs. You should, 
+			before acting on the information, consider its appropriateness having regard to your own financial objectives, 
+			situation and needs and consider obtaining personal financial advice from a financial adviser. Before you make a 
+			decision regarding any of the products mentioned, you should obtain and consider a copy of the relevant principal 
+			brochures and fund fact sheet from the product issuer.</span></p></td>
+			<td width="10%" align="right"><img src='{!#HOSTED_FILE.78008185#url}' style="width: 25px; height:25px; "></td>	
+		</tr>
+	</table>
+</div>
+
+<div class="clear"></div>
+<div class="scheme-comparision">
+    <div class= "container">
+    
+            <div class="titlepage">
+            <div align="center"><img src ="{!R361363.provider_logo#value}" height="35px"></div>
+            <h2 style="font-size: 15px; text-align:center; height:60px;">{!R361363.name#text}</h2></div>
+            <div><!--  class="fixed header" -->
+                <div></div>
+                <div class= "name">Scheme Name</div><br>
+                <div class= "text">
+                    <table style="width: 100%;">
+                    <tr> 
+                        <td style="width: 50%;">Provider Details:</td>
+                        <td style="width: 50%;" class="align">{!R361363.provider_name}</td>
+                    </tr>
+                    <tr> 
+                        <td>Provider Status:</td>
+                        <td class="align">{!R361363.provider_status}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Date Established:</td>
+                        <td class="align">{!R361363.date_established}</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 35px;">Website:</td>
+                        <td class="align">{!R361363.website}</td>
+                    </tr>
+                    <tr> 
+                        <td>Phone:</td>
+                        <td class="align">{!R361363.phone}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Fax:</td>
+                        <td class="align"> {!R361363.fax} </td>
+                    </tr>
+                    <tr> 
+                        <td>Provider Trustee Name:</td>
+                        <td class="align" style="height:30px;">{!R361363.provider_trustee_name}</td> 
+                    </tr>
+                    <tr> 
+                        <td style="height: 30px;">Address Line 1:</td>
+                        <td class="align">{!R361363.address_line_1}</td> 
+                    </tr>
+                    <tr> 
+                        <td style="height: 30px;">Address Line 2:</td>
+                        <td class="align">{!R361363.address_line_2}</td> 
+                    </tr>
+                    </table>
+                </div> <br>
+                
+                <div class= "name"> Scheme Facts</div><br>
+                <div class= "text">
+                    <table style="width: 100%;">
+                    <tr> 
+                    <td style="width: 50%;">Scheme Size:</td>
+                    <td class="align">-</td>
+                </tr>
+                <tr> 
+                    <td>Commencement Date:</td>
+                    <td class="align">{!R703123.fund_effective_date_2#value}</td> 
+                </tr>
+                <tr> 
+                    <td style="width: 50%;">Number of Funds:</td>
+                    <td class="align">{!R703123.no__of_funds}</td>
+                </tr>
+                <tr> 
+                    <td>Trustee:</td>
+                    <td class="align">{!R703123.R182281.trustee_name}</td> 
+                </tr>
+                <tr> 
+                    <td>Member Benefit Statements:</td>
+                    <td class="align">{!R703123.Member_Benefit_Statements__c#value}</td>
+                </tr>
+                <tr> 
+                    <td>Member Newsletter:</td>
+                    <td class="align">{!R703123.Member_Newsletter__c#value}</td>
+                </tr>
+                <tr> 
+                    <td>Scheme Architecture:</td>
+                    <td class="align">{!R703123.Architecture__c#value}</td> 
+                </tr>
+                <tr> 
+                    <td>Life Cycle Funds:</td>
+                    <td class="align"> {!R703123.Life_Cycle_Funds__c#value} </td>
+                </tr>
+                <tr> 
+                    <td style="height: 35px;">Website:</td>
+                    <td class="align">{!R703123.website}</td> 
+                </tr>
+                <tr> 
+                    <td>Contact Phone No.:</td>
+                    <td class="align"> {!R703123.phone__formatted_} </td>
+                </tr>
+                    </table>
+                </div> <br>
+                
+                
+                <div class="name">MPF Ratings Assessment</div><br>
+                <div class="text">
+
+                    <table style="width: 100%;">
+                    <tr> 
+                        <td style="width: 50%;">Investment</td>
+                        <td class="align"><img src="{!R361363.investment#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Performance</td>
+                        <td class="align">{!R361363.performance#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Risk Indicator Rating</td>
+                        <td class="align">{!R361363.risk_indicator_rating#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Risk Adjusted Performance</td>
+                        <td class="align">{!R361363.risk_adjusted_performance#value}</td>
+                    </tr>
+                    
+                    <tr> 
+                        <td>Fees</td>
+                        <td class="align"><img src="{!R361363.fees_and_charges#value}" height="12px"></td>
+
+                    </tr>
+                    <tr> 
+                        <td>Stated Management Fee</td>
+                        <td class="align">{!R361363.employee_account#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Earning to Fee</td>
+                        <td class="align">{!R361363.earning_to_fee#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Fund Expense Variance</td>
+                        <td class="align">{!R361363.preserved_account#value}</td>
+                    </tr>
+
+                    <tr> 
+                        <td>Administration?</td>
+                        <td class="align"><img src="{!R361363.administration#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Governance</td>
+                        <td class="align">{!R361363.structure_and_service#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Employer Servicing</td>
+                        <td class="align">{!R361363.employer_servicing#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Member Servicing</td>
+                        <td class="align">{!R361363.member_servicing#value}</td>
+                    </tr>
+                    
+                    <tr> 
+                        <td>Education and Advice</td>
+                        <td class="align"><img src="{!R361363.education#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Education tools</td>
+                        <td class="align">{!R361363.member_education#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Member advice</td>
+                        <td class="align">{!R361363.employer_education#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Use of technology</td>
+                        <td class="align">{!R361363.use_of_technology#value}</td>
+                    </tr>
+                    </table>
+                </div>
+               
+                <div class="name">What We Say</div><br>
+                <div class="text">
+                    <table style="width:100%; height: 134px;">
+                    <tr> 
+                        <td class="align" style="vertical-align:top; text-align:justify;">{!R361363.what_we_say#value}</td>
+                    </tr>
+                    </table>
+                </div>
+                     
+                
+            </div>   
+    </div>
+    
+   <div class= "container">
+            <div class="titlepage">
+            <div align="center"><img src ="{!R701777.provider_logo#value}" height="35px"></div>
+            <h2 style="font-size: 15px; text-align:center; height:60px;">{!R701777.name#text}</h2></div>
+            <div><!--  class="fixed header" -->
+                <div></div>
+                <div class= "name">Scheme Name</div><br>
+                <div class= "text">
+                    <table style="width: 100%;">
+                    <tr> 
+                        <td style="width: 50%;">Provider Details:</td>
+                        <td style="width: 50%;" class="align">{!R701777.provider_name}</td>
+                    </tr>
+                    <tr> 
+                        <td>Provider Status:</td>
+                        <td class="align">{!R701777.provider_status}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Date Established:</td>
+                        <td class="align">{!R701777.date_established}</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 35px;">Website:</td>
+                        <td class="align">{!R701777.website}</td>
+                    </tr>
+                    <tr> 
+                        <td>Phone:</td>
+                        <td class="align">{!R701777.phone}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Fax:</td>
+                        <td class="align"> {!R701777.fax} </td>
+                    </tr>
+                    <tr> 
+                        <td>Provider Trustee Name:</td>
+                        <td class="align" style="height:30px;">{!R701777.provider_trustee_name}</td> 
+                    </tr>
+                    <tr> 
+                        <td style="height: 30px;">Address Line 1:</td>
+                        <td class="align">{!R701777.address_line_1}</td> 
+                    </tr>
+                    <tr> 
+                        <td style="height: 30px;">Address Line 2:</td>
+                        <td class="align">{!R701777.address_line_2}</td> 
+                    </tr>
+                    </table>
+                </div> <br>
+                
+                <div class= "name"> Scheme Facts</div><br>
+                <div class= "text">
+                    <table style="width: 100%;">
+                    <tr> 
+                    <td style="width: 50%;">Scheme Size:</td>
+                    <td class="align">-</td>
+                </tr>
+                <tr> 
+                    <td>Commencement Date:</td>
+                    <td class="align">{!R703123.fund_effective_date_2#value}</td> 
+                </tr>
+                <tr> 
+                    <td style="width: 50%;">Number of Funds:</td>
+                    <td class="align">{!R703123.no__of_funds}</td>
+                </tr>
+                <tr> 
+                    <td>Trustee:</td>
+                    <td class="align">{!R703123.R182281.trustee_name}</td> 
+                </tr>
+                <tr> 
+                    <td>Member Benefit Statements:</td>
+                    <td class="align">{!R703123.Member_Benefit_Statements__c#value}</td>
+                </tr>
+                <tr> 
+                    <td>Member Newsletter:</td>
+                    <td class="align">{!R703123.Member_Newsletter__c#value}</td>
+                </tr>
+                <tr> 
+                    <td>Scheme Architecture:</td>
+                    <td class="align">{!R703123.Architecture__c#value}</td> 
+                </tr>
+                <tr> 
+                    <td>Life Cycle Funds:</td>
+                    <td class="align"> {!R703123.Life_Cycle_Funds__c#value} </td>
+                </tr>
+                <tr> 
+                    <td style="height: 35px;">Website:</td>
+                    <td class="align">{!R703123.website}</td> 
+                </tr>
+                <tr> 
+                    <td>Contact Phone No.:</td>
+                    <td class="align"> {!R703123.phone__formatted_} </td>
+                </tr>
+                    </table>
+                </div> <br>
+                
+                <div class="name">MPF Ratings Assessment</div><br>
+                <div class="text">
+                    <table style="width: 100%;">
+                    <tr> 
+                        <td style="width: 50%;">Investment</td>
+                        <td class="align"><img src="{!R701777.investment#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Performance</td>
+                        <td class="align">{!R701777.performance#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Risk Indicator Rating</td>
+                        <td class="align">{!R701777.risk_indicator_rating#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Risk Adjusted Performance</td>
+                        <td class="align">{!R701777.risk_adjusted_performance#value}</td>
+                    </tr>
+                    
+                    <tr> 
+                        <td>Fees</td>
+                        <td class="align"><img src="{!R701777.fees_and_charges#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Stated Management Fee</td>
+                        <td class="align">{!R701777.employee_account#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Earning to Fee</td>
+                        <td class="align">{!R701777.earning_to_fee#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Fund Expense Variance</td>
+                        <td class="align">{!R701777.preserved_account#value}</td>
+                    </tr>
+
+                    <tr> 
+                        <td>Administration?</td>
+                        <td class="align"><img src="{!R701777.administration#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Governance</td>
+                        <td class="align">{!R701777.structure_and_service#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Employer Servicing</td>
+                        <td class="align">{!R701777.employer_servicing#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Member Servicing</td>
+                        <td class="align">{!R701777.member_servicing#value}</td>
+                    </tr>
+                    
+                    <tr> 
+                        <td>Education and Advice</td>
+                        <td class="align"><img src="{!R701777.education#value}" height="12px"></td>
+                    </tr>
+                    <tr> 
+                        <td>Education tools</td>
+                        <td class="align">{!R701777.member_education#value}</td> 
+                    </tr>
+                    <tr> 
+                        <td>Member advice</td>
+                        <td class="align">{!R701777.employer_education#value}</td>
+                    </tr>
+                    <tr> 
+                        <td>Use of technology</td>
+                        <td class="align">{!R701777.use_of_technology#value}</td>
+                    </tr>
+                    </table>
+                </div>
+                
+                <div class="name">What We Say</div><br>
+                <div class="text">
+                    <table style="width:100%; height: 134px;">
+                    <tr> 
+                        <td class="align" style="vertical-align:top; text-align:justify;">{!R701777.what_we_say#value}</td>
+                    </tr>
+                    </table>
+                </div>
+                
+                
+                
+            </div>
+  </div>
+</div>  <div class="clear"></div>  
+</div>
+<div class="scheme-comparison">
+	<div class="container">
+    <div class= "name"> Fund Investment menu</div><br>
+                <div class="text related1">
+                    {!R361363.related_funds}</strong>
+                </div>
+                <br />
+                <div class= "name">Investment Performance</div><br>
+                <div class="text related2">
+                    {!R361363.related_fund_invesment}
+                </div>
+    </div>
+    
+    <div class="container">
+    	<div class= "name"> Fund Investment menu</div><br>
+                <div class="text related1">
+                    {!R701777.related_funds}</strong>
+                </div>
+                <br />
+                <div class= "name">Investment Performance</div><br>
+                <div class="text related2">
+                    {!R701777.related_fund_invesment}
+                </div>
+    </div>
+</div>
+
+<div id="eca-form">
+	<div class="clear"></div>
+    
+    <div class="left">FORM MPF(S) - P(P)</div>
+    <div class="right">Annex B to IV.3</div>	
+
+    
+    <div class="headerbox-top"></div>
+    
+    <div style="margin-top: 15px 5px; vertical-align: bottom;">
+        <div id="left-mark" align="center">
+            (FOR NEW TRUSTEE'S USE ONLY)<br />Form Received Date:<br />
+        </div>
+        
+        <div id="right-mark" align="center">
+            FORM MPF(S)-P(P)
+        </div>
+    </div>
+    <div style="border-bottom:3px double #000; margin: 0; margin-bottom: 10px; margin-top:10px; height: 120px;">
+        <p class="title"><b>EMPLOYEE CHOICE ARRANGEMENT ("ECA") - TRANSFER ELECTION FORM</b></p>
+        <p class="title"><b>(For employee to transfer accrued benefits from contribution account in an original scheme <br /> to an account in a new scheme nominated by the employee <u>during employment</u>)</b></p>
+        <br/>
+        <span style="font-style:italic; font-size:12px; "><center>Sections 148A and 148B of the Mandatory Provident Fund Schemes (General) Regulation ("the Regulation")</center></span> <br/>
+    </div>
+
+	
+    <div class="list">
+        <ul style="list-style:none; list-style-type:none; font-style:italic;">
+                <li style="position: relative; left: -40px;">  (a)&nbsp;&nbsp;&nbsp;&nbsp;  Please use BLOCK LETTERS to complete this Form.</li>
+                <li style="position: relative; left: -40px;">  (b)&nbsp;&nbsp;&nbsp;&nbsp;  * means delete whichever is inappropriate. Please insert "N.A." if not applicable.</li>
+                <li style="position: relative; left: -40px;">  (c)&nbsp;&nbsp;&nbsp;&nbsp;  The personal data to be supplied in this Form are to be used for the purpose(s) of processing your election(s) of transfer as requested in this Form.</li>
+                <li style="position: relative; left: -40px;">  (d)&nbsp;&nbsp;&nbsp;&nbsp;  The personal data you supply may, for the purpose(s) mentioned above or for a purpose directly related
+                         to such purpose(s), be transferred to the trustee(s) concerned, the relevant service provider(s), the
+                         Mandatory Provident Fund Schemes Authority ("MPFA") and other appropriate parties.</li>
+        </ul>
+    </div>
+    
+    <p class="section">SECTION I – SCHEME MEMBER'S DETAILS</p>
+    
+    <table class="default">
+        <tr>
+            <td width="200" rowspan="2">(1) Name: <br />(same as that shown on 
+your Hong Kong Identity 
+(HKID) Card <sup>Note 1</sup>
+) 
+</td>
+            <td width="200">(a) Surname:</td>
+            <td class="data" width="300">&nbsp;{!surname#value}</td>
+        </tr>
+        <tr>
+            <td>(b) Other Name:</td>
+            <td class="data">&nbsp;{!_b__other_name_#value}</td>
+        </tr>
+        <tr>
+        	<td>(2) Identification: </td>
+            <td>(a) HKID Card number:</td>
+            <td class="data">&nbsp;{!_a__hkid_card_number#value}</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>(b) Passport number:</td>
+            <td class="data">&nbsp;{!_b__passport_number#value}</td>
+        </tr>
+        <tr>
+        	<td>(3) Contact details: </td>
+            <td>(a)Daytime contact number:</td>
+            <td class="data">&nbsp;{!_a__daytime_contact_number#value}</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>(b) Mobile phone number:</td>
+            <td class="data">&nbsp;{!_b__mobile_phone_number#value}</td> 
+        </tr>
+        <tr>
+        	<td></td>
+            <td>(c)Email address (if any):</td>
+            <td class="data">&nbsp;{!email_address#text}</td>
+		</tr>
+        <tr>
+            <td colspan="3">(4) Correspondence address:</td>
+        </tr>  	
+        <tr>
+            <td colspan="3" class="data" style="border-left: 1px solid #000; border-right: 1px solid #000;">&nbsp;{!_4__correspondence_address}</td>
+        </tr>
+        <tr style="height:2px;">
+        	<td></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="data" style="border-left: 1px solid #000; border-right: 1px solid #000;">&nbsp;</td>
+        </tr>
+        <tr style="height:2px;">
+        	<td></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="data" style="border-left: 1px solid #000; border-right: 1px solid #000;">* Hong Kong / Kowloon / N.T. / Others</td>
+        </tr>  
+    </table>
+    
+    <br>
+    <p class="section">SECTION II – CONTRIBUTION ACCOUNT INFORMATION IN THE ORIGINAL SCHEME</p>
+    
+    <table class="default" style="margin-bottom: 20px;">
+        <tr>
+        	<td>(5)</td>
+            <td colspan="2"> MPF account information in the original scheme: </td>
+        </tr>		
+        <tr>
+        	<td></td>
+            <td width="250">Name of original trustee <sup>Note 2</sup>:</td>
+            <td width="400" class="data">&nbsp;{!name_of_original_trustee#value}</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>Scheme member's account number <sup>Note 2</sup>:</td>
+            <td class="data">&nbsp;{!scheme_members_account_number#value}</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>Name of current employer: </td>
+            <td class="data">&nbsp;{!name_of_current_employer#value}</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>Employer's identification number <sup>Note 3</sup>: </td>
+            <td class="data">&nbsp;{!employers_identification_number#value}</td>
+        </tr>			
+    </table>
+    
+    <div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 1 / 11</div>
+	<br />
+    <div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>	
+    <div class="headerbox-top"></div>
+    
+    <p class="section"><b>SECTION III – TRANSFER OF MANDATORY CONTRIBUTIONS</b> <sup>Note 4</sup></p>
+	<p style="font-style:italic;">Remarks: If you wish to transfer the accrued benefits in section III(6) and section IV(8) to more than one MPF account, please fill in a separate Form MPF(S)-P(P) for each MPF account that receives the accrued benefits.</p>
+					
+    <table class="default">
+        <tr>
+            <td>(6)</td>
+            <td>Please note the following abbreviations in this section: </td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>
+            	<div class="box">
+                	<p><b>EEMC: Employee mandatory contributions in <u>current</u> employment</b> <sup>Note 5</sup></p>
+                    <p><b>FRMC: Mandatory contributions in respect of <u>former</u> employment(s)</b> <sup>Note 6</sup></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>Choose ONE of the following (by ticking the corresponding box) to select the part of the accrued benefits to be transferred:</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>
+            	<table class="table-display">
+                	<tr>
+                    	<th style="padding:10px;" colspan="2">Accrued benefits to be transferred from the original scheme</th>
+                        <th><img src="{!#HOSTED_FILE.842460}"/></th>
+                    	<th colspan="3" style="padding:10px; text-align:left; text-align:left;">MPF account in the new scheme that receives the accrued benefits</th>
+                    </tr>
+                    <tr>
+                    	<td style="padding-left:10px;">{!acc_ben_1_8_1}</td>
+                    	<td style="padding:10px;">(i) Both EEMC  <sup>Note 7</sup> and FRMC</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;">Personal Account</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;"><b>Fill in Section III - (7)(a) only</b></td>
+                    </tr>
+                    <tr>
+                    	<td style="padding-left:10px;">{!acc_ben_1_8_2}</td>
+                    	<td style="padding:10px;">(ii) EEMC  <sup>Note 7</sup> only</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;">Personal Account</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;"><b>Fill in Section III - (7)(a) only</b></td>
+                    </tr>
+					<tr>
+                    	<td style="padding-left:10px;">{!acc_ben_1_8_3}</td>
+                    	<td style="padding:10px;">(iii) FRMC only</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;">
+                        	<table class="no-border">
+                            	<tr>
+                                	<td>{!t6_3_cb}</td>
+                                	<td>(a) Personal account*</td>
+                                </tr>
+                                <tr><td colspan="2" style="text-align:center"> <u><b><i>OR</i></b></u> </td></tr>
+                                <tr>
+                                	<td>{!t6_3_cb___ca}</td>
+                                	<td>(b) Contribution account*</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;"><b>Fill in Section III - (7)(a) only<br /><br />  Fill in Section III - (7)(b) only</b></td>
+                   </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>* Please select option (a) OR (b) if (iii) is chosen; note that if both options (a) and (b) are selected,
+ONLY option (a) will be processed.</td>
+        </tr>
+    </table>
+
+	<table>
+		<tr>
+        	<td>(7)</td>
+			<td>Information on the MPF account in the new scheme: </td>
+		</tr>	
+        <tr>
+            <td></td>
+            <td>
+            	<table>
+                	<tr>
+                    	<td>(a)</td>
+            			<td><b>Personal account</b></td>
+                    </tr> 
+                    <tr>
+                    	<td></td>
+                        <td>   
+							<table class="default">
+                                <tr>
+                                    <td width="200">Name of new trustee <sup>Note 8</sup>:</td>
+                                    <td class="data">{!name_of_new_trustee8a#value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Name of new scheme <sup>Note 8</sup>:</td>
+                                    <td class="data">{!R361366}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Scheme member's account number <sup>Note 8</sup>:</td>
+                                    <td class="data">{!scheme_members_account_number8a#value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>(b)</td>
+            			<td><b>Contribution account</b><i>(applicable only if you have chosen section III(6)(iii)(b) or section IV(8)(iii)(b))</i></td>
+                    </tr> 
+                    <tr>
+                    	<td></td>
+                        <td>   
+							<table class="default">
+                                <tr>
+                                    <td width="200">Name of new trustee <sup>Note 8</sup>:</td>
+                                    <td class="data">{!name_of_new_trustee8b#value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Name of new scheme <sup>Note 8</sup>:</td>
+                                    <td class="data">{!R363157}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Scheme member's account number <sup>Note 8</sup>:</td>
+                                    <td class="data">{!scheme_members_account_number8b#value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Name of employer:</td>
+                                    <td class="data">{!name_of_employer_#value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Employer's identification number <sup>Note 8</sup>:</td>
+                                    <td class="data">{!employers_identification_number8a#value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>                
+            </td>
+		</tr>
+        <tr>
+        	<td colspan="2">
+            	<p>Do you have any accrued benefits derived from voluntary contributions made to your contribution account specified in section II(5) and wish to transfer such accrued benefits to the new scheme's MPF account specified in section III(7)?</p>
+				<ul style="list-style:none;">
+                	<li><img src="{!#HOSTED_FILE.842597}" />&nbsp;&nbsp;If NO, please skip section IV and go to section V directly.</li>
+                    <li><img src="{!#HOSTED_FILE.842597}" />&nbsp;&nbsp;If YES, please fill in section IV, then go to section V.</li>
+                </ul>    
+            </td>
+        </tr>
+	</table>
+    <br/>
+    <div class="headerbox-bottom"></div>
+    <div class="left">Version 4 – August 2012</div>
+    <div class="right">Page 2 / 11</div>
+
+    <br>
+    <div class="left">FORM MPF(S) - P(P)</div>
+    <div class="right">Annex B to IV.3</div>
+    <div class="headerbox-top"></div>
+    <br>
+    
+    <p class="section">SECTION IV – TRANSFER OF VOLUNTARY CONTRIBUTIONS <sup>Note 9</sup><u>(ONLY IF THE GOVERNING RULES OF THE ORIGINAL SCHEME PERMIT)</u></p>
+    <table class="default">
+        <tr>
+            <td>(8)</td>
+            <td>Please note the following abbreviations in this section: </td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>
+            	<div class="box">
+                	<p><b>EEVC: Employee voluntary contributions in <u>current</u> employment</b>  <sup>Note 10</sup></p>
+                    <p><b>FRVC: Voluntary contributions in respect of <u>former</u> employment(s)</b>  <sup>Note 11</sup></p>
+                </div>
+            </td>
+        </tr>
+         <tr>
+        	<td></td>
+            <td>Choose ONE of the following (by ticking the corresponding box) to select the part of the accrued benefits to be transferred:</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>
+            	<table class="table-display">
+                	<tr>
+                    	<th style="padding:10px;" colspan="2">Accrued benefits to be transferred from the original scheme</th>
+                        <th><img src="{!#HOSTED_FILE.842460}"/></th>
+                    	<th colspan="3" style="padding:10px;">MPF account in the new scheme that receives the accrued benefits</th>
+                    </tr>
+                    <tr>
+                    	<td style="padding-left:10px;">{!acc_ben_2_8_1}</td>
+                    	<td style="padding:10px;">(i) Both EEVC and FRVC</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;">Personal Account</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;"><b>Fill in Section III - (7)(a) only</b></td>
+                    </tr>
+                    <tr>
+                    	<td style="padding-left:10px;">{!acc_ben_2_8_2}</td>
+                    	<td style="padding:10px;">(ii) EEVC only</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;">Personal Account</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;"><b>Fill in Section III - (7)(a) only</b></td>
+                    </tr>
+					<tr>
+                    	<td style="padding-left:10px;">{!acc_ben_2_8_3}</td>
+                    	<td style="padding:10px;">(iii) FRVC only</td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;">
+                        	<table class="no-border">
+                            	<tr>
+                                	<td>{!t8_3_cb_pa}</td>
+                                	<td>(a) Personal account*</td>
+                                </tr>
+                                <tr><td colspan="2" style="text-align:center"> <u><b><i>OR</i></b></u> </td></tr>
+                                <tr>
+                                	<td>{!t8_3_cb___ca}</td>
+                                	<td>(b) Contribution account*</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td><img src="{!#HOSTED_FILE.842460}"/></td>
+                        <td style="padding:10px;"><b>Fill in Section III - (7)(a) only<br /><br />  Fill in Section III - (7)(b) only</b></td>
+                   </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td>* Please select option (a) OR (b) if (iii) is chosen; note that if both options (a) and (b) are selected,
+ONLY option (a) will be processed.</td>
+        </tr>
+    </table>
+    
+    <p class="section">SECTION V – AUTHORIZATION AND DECLARATION</p>
+  <table>
+		<tr>
+        	<td style="vertical-align:top;">(9)</td>
+			<td>I hereby give consent to the MPFA to disclose information collected in this Form to the trustee(s) concerned, the relevant service provider(s) and other appropriate parties, or to enable such party or parties to access the information for the purposes of processing the transfer of my accrued benefits.</td>
+		</tr>	
+        <tr>
+        	<td style="vertical-align:top;">(10)</td>
+			<td>I declare that:<br />
+					(a) I have read the Guide to Transfer Benefits under Employee Choice Arrangement ("ECA");<br />
+					(b) at the date of submitting this Form, I am employed by the employer in relation to the contribution account in my original scheme; and<br />
+					(c) to the best of my knowledge and belief, the information given in this Form is correct and complete.
+			</td>
+		</tr>
+	</table>
+    
+	<table class="default" style="margin-top: 130px;">	
+        <tr style="height:3px !important;">
+        	<td width="40" style="height:3px !important;"></td>
+            <td width="120" style="height:3px !important;" class="data">&nbsp;<!--<img src="{!signature_of_the_scheme_member#url}" width="40%" height="40% ! important">--></td>
+            <td width="40" style="height:3px !important;"></td>
+            <td width="100" style="height:3px !important; text-align: center;" class="data">&nbsp;{!date_signed}</td>
+        </tr>
+        <tr>
+        	<td></td>
+            <td align="center">Signature of the employee <sup>Note 12</sup></td>
+            <td></td>
+            <td align="center">Date</td>
+        </tr>
+    </table>  
+    
+    <br />
+    <br />
+    <br />
+	<div class="headerbox-top"></div>
+    <div class="left">Version 4 – August 2012</div>
+    <div class="right">Page 3 /11</div>
+    <br>
+    <br />
+    <div class="left">FORM MPF(S) - P(P)</div>
+    <div class="right">Annex B to IV.3</div>
+	<div class="headerbox-bottom"></div>
+   	<br />
+    <br />
+    <br />
+    <br />
+    <br />
+	<div style="margin: 260px 0px 405px; font-size:20px;">[This page is blank. Please complete Form MPF(S)-P(P) at page 1 to page 3 and submit it<i><span style="color:#778899;">(excluding (1) the Explanatory Notes on Employee Choice Arrangement ("ECA") - Transfer Election Form (Form MPF(S) - P(P)) and (2) the Guide to Transfer Benefits under Employee Choice Arrangement ("ECA"))</i></span> to the new trustee after completion.]
+    </div>
+    <br />
+    <br />
+    <div class="headerbox-top"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 4 / 11</div>
+	<br>
+	<div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+	<br>
+    
+    <p class="title" style="font-size:16px;"><i><b>Explanatory Notes on</b></i></p>
+	<p class="title" style="font-size:16px;"><i><b>Employee Choice Arrangement ("ECA") - Transfer Election Form (Form MPF(S) - P(P))</b></i></p>
+	
+    <style>.explan li { margin-bottom: 8px; }</style>
+	<div style="margin: 10px 0px 0px; font-size: 13px;">
+		<ol class="explan">
+			<li>If you do NOT possess a HKID Card, please fill in your name as shown on your passport.</li> 
+            <li>Please note that the transfer request may not be processed if the name of the original trustee, the name of the original scheme, your scheme member's account number in the original scheme, type of MPF account, the name of your former employer or the employer's identification number is not provided or is incorrect. This information can be found:
+ 
+                <p>(a) in your membership certificate;</p>
+                <p>(b) in your annual benefit statement; or</p>
+                <p>(c) through the member enquiry facilities available from trustees.</p>
+                <p><b>If you are in doubt, please contact your original trustee or your employer.</b></p>
+			</li>
+            <li>The employer's identification number is the number assigned by the trustee to the employer concerned. Trustees may use different names for this number (e.g. account number, company code, contract number, employer account number, employer code, employer ID, employer number, MPF client number, participating plan number, plan number, scheme number, scheme ID, sub-scheme number). The number can be found in the statements issued by the trustees or through the member enquiry facilities available from trustees. If you are in doubt, please contact your trustee or your employer.
+            </li> 
+			<li>If any part of the accrued benefits chosen under section III(6) contains nil balance, that part will not be processed. </li>
+			<li>
+				<p>(a)This includes all accrued benefits in the sub-account under s.78(6)(b) of the Regulation.</p>
+				<p>(b) For a casual employee in an industry scheme, this sub-account generally contains the accrued benefits derived from all the employee mandatory contributions made to this sub-account whilst working as a casual employee with different employers.</p>
+			</li> 
+			<li>This includes all accrued benefits in the sub-account under s.78(6)(c) of the Regulation, which generally contains the accrued benefits derived from the mandatory contributions in respect of your former employment(s) or former self-employment(s) transferred into the contribution account.
+			</li> 
+			<li>If you have already elected to transfer out the accrued benefits derived from the employee mandatory contributions under section III(6)(i) or (6)(ii) once (or, if the governing rules of the original scheme allow more than once, the maximum number of times allowed by the governing rules) in the same calendar year, transfer of that part of the accrued benefits will not be processed.
+			</li> 
+            <li style="margin-bottom: 0px !important;">Please note that the transfer request may not be processed if the name of the new trustee, the name of the new scheme or your scheme member's account number in your new scheme is not provided or is incorrect. The information can be found:
+				
+				<p>(a)in your membership certificate;</p>
+				<p>(b) in your annual benefit statement; or</p>
+				<p>(c) through the member enquiry facilities available from trustees.</p>
+				<p>You may, however, leave the scheme member's account number blank if you have recently enrolled in the scheme and have not been notified of the new account number. If you are in doubt, please contact your new trustee.</p>
+			</li> 
+		</ol>
+	</div>
+
+	<div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 5 / 11</div>
+	<br />		
+    <div class="left">FORM MPF(S) - P(M)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+
+    <div style="margin: 30px 0px 500px; font-size:14;">
+        <ol start="9" class="explan">
+            <li>		
+                <p>(a)If you request the transfer out of accrued benefits derived from the voluntary contributions under section IV(8) but the governing rules of the original scheme do not allow this, the option(s) will not be processed.</p>
+                <p>(b) If any part of the accrued benefits chosen under section IV(8) contains nil balance, that part will not be processed.</p>
+            </li> 
+            <li>			
+                <p>(a)This includes all accrued benefits in the sub-account under s.78(6)(e) of the Regulation.</p>
+                <p>(b) For a casual employee in an industry scheme, this sub-account generally contains the accrued benefits derived from all the employee voluntary contributions made to this sub-account whilst working as a casual employee with different employers.</p>
+            </li> 
+            <li>This includes all accrued benefits in the sub-account under s.78(6)(f) of the Regulation, which generally contains the accrued benefits derived from the voluntary contributions in respect of your former employment(s) or former self-employment(s) transferred into the contribution account.
+            </li> 
+            <li>The signature must be the same as your specimen signature previously submitted to your original trustee. Please note that the transfer may not be processed if the signature provided in this Form does not match your specimen signature. If you are in doubt, please contact your original trustee.
+            </li> 
+        </ol>
+    </div>
+	
+    <div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 6 /11</div>
+	<br />
+	<div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+	<br />
+    <div style="border-bottom:3px double #000;">
+    <p class="section" style="font-size:16px; text-align:center;">
+    <strong>GUIDE TO TRANSFER BENEFITS UNDER<br />EMPLOYEE CHOICE ARRANGEMENT ("ECA")</strong><br /> (For employee to transfer accrued benefits from contribution account in an original scheme<br /> to an account in a new scheme nominated by the employee <u> during employment</u>) </p>
+	</div>
+<br />
+    <div style="font-style: italic;font-size:14px;">
+        <p> Please read the following important information before you complete Form MPF(S)-P(P).</p>
+        <p> <b>Definition of terms used in this Guide:</b></p>
+        
+        <ol  type="a" style="font-size:14px;">
+            <li>"Contribution account" – an account in an MPF scheme which is mainly used to receive MPF contributions (both employer and employee portions) made by an employer for an employee and on behalf of the employee. Contribution account may also include an account of a self-employed person in the new scheme which is mainly used to receive MPF contributions made by himself while self-employed.</li> 
+            <li >"Personal account" – an account in an MPF scheme which is mainly used to receive the accrued benefits transferred from another account(s).</li> 
+            <li>"Original trustee" (also known as "transferor trustee" in the Mandatory Provident Fund Schemes (General) Regulation ("the Regulation")) – the trustee of an MPF scheme from which your accrued benefits are to be transferred.</li> 
+            <li>"New trustee" (also known as "transferee trustee" in the Regulation) – the trustee of an MPF scheme to which your accrued benefits are to be transferred. If you elect to transfer your accrued benefits to another account within the same MPF scheme or to another MPF scheme under the same trustee, the new trustee on Form MPF(S)-P(P) will be the same as the original trustee.</li> 
+            <li>"Original scheme" – the MPF scheme from which your accrued benefits are to be transferred.</li> 
+            <li>"New scheme" – the MPF scheme to which your accrued benefits are to be transferred. If you elect to transfer your accrued benefits to another account within the same MPF scheme, the new scheme on Form MPF(S)-P(P) will be the same as the original scheme.</li> 
+            <li>"Calendar year" – the one-year period from 1 January to 31 December.</li> 
+        </ol>
+    </div>
+	
+	<p><b><u>Introduction</u></b></p>
+    <div style="margin-bottom: 15px;">
+        <ol class="explan" style="font-size:14px;">
+            <li>The Mandatory Provident Fund Schemes (Amendment) Ordinance 2009 ("the Amendment Ordinance 2009") enacted by the Legislative Council in July 2009 empowers employees to transfer part of the accrued benefits from their contribution accounts<b> to the accounts nominated by them in any MPF scheme during employment </b>("Employee Choice Arrangement").
+            </li>
+            <li>Under the MPF System, an employer is responsible for choosing the MPF scheme(s) for its employees and making contributions for and on behalf of its employees to the scheme(s), whilst an employee is responsible for choosing the fund(s) under the scheme(s) to invest in.
+            </li>
+            <li>An employer makes the contributions (both employer and employee portions) for and on behalf of an employee to the employee's contribution account. The accumulated balance of contributions and investment returns is referred to as <b>"accrued benefits"</b>.
+            </li>
+            <li>Before the implementation of the Employee Choice Arrangement, if an employee wishes to choose his own MPF scheme, he can only make an election when he ceased or changed employment usually by electing to transfer the accrued benefits from his contribution account to the following account:
+			<ol>
+            	<li type="a"> a preserved account (this account is renamed to "personal account" after the implementation of the Employee Choice Arrangement) in any MPF scheme (excluding employer sponsored scheme); or </li>
+            </ol>
+        </ol>
+	</div>
+	
+    <div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 7 / 11</div>
+    <br/>		
+	<div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+    	
+	<div style="margin-top: 15px; font-size:14px;">
+    	<ol start="2" class="explan">
+        	<li type="a"> a contribution account in his new employer's MPF scheme. </li>
+		</ol>
+        
+        <p class="section"><b><u>New right to employees</u></b></p>	
+        <ol start="5" class="explan">
+        	<li>Under the Employee Choice Arrangement, an employee can, during employment, make an election to transfer part of the accrued benefits from a contribution account in an original scheme to an account in a new scheme nominated by him.
+			</li>
+        	<li>The table below shows the three sub-accounts keeping the mandatory contributions in a contribution account and the transferability of the accrued benefits from each of these sub-accounts <b>during an employee's current employment</b> before and after the implementation of the Employee Choice Arrangement.
+            
+                <table class="table-display" style="border: 1px #000 solid; text-align: center;" border="1">
+                    <tr>
+                        <th width="300"> <center>Sub-accounts in </center><center>an employee's</center>contribution account</th>
+                        <th width="300">Before "ECA"</th>
+                        <th width="300">After "ECA"</th>
+                    </tr>
+                    <tr>
+                        <td><center> ERMC</center></td>
+                        <td><center> Not transferable</center></td>
+                        <td><center> Not transferable</center></td>
+                    </tr>
+                    <tr>
+                        <td><center> EEMC</center></td>
+                        <td><center> Not transferable</center></td>
+                        <td> <center>Transferable to an MPF personal account<br /> <b>once per calendar</b> year1</center></td>
+                    </tr>
+                    <tr>
+                        <td><center> FRMC</center></td>
+                        <td><center> Not transferable</center></td>
+                        <td><center>Transferable to an MPF personal account <br />or contribution account anytime</center></td>
+                    </tr>
+                </table>
+                
+                <p class="italize">ERMC: Employer mandatory contributions in current employment<br /> EEMC: Employee mandatory contributions in current employment<br /> FRMC: Mandatory contributions from former employment(s)</p>
+			</li>
+            <li>The transferability of accrued benefits derived from voluntary contributions is subject to the governing rules of the original scheme. Please check this information from the offering documents of your original scheme; or consult your employer or original trustee.
+			</li>
+            <li>You can <b>check the balances of the accrued benefits in your contribution account</b> and its sub-accounts by any of the following means:
+				<ol style="margin-bottom: 0px !important;"> 
+            		<li type="a"> the member enquiry facilities made available by the original trustee (e.g. hotline); or </li>
+					<li type="a"> a contribution account in his new employer's MPF scheme. </li>
+					<li type="a" style="margin-bottom: 0px;"> directly consulting the original trustee (the contact lists of MPF trustees and MPF schemes are available at the office of the Mandatory Provident Fund Schemes Authority ("MPFA") and on its website (www.mpfa.org.hk)). </li>
+				</ol>
+			</li>
+        </ol>
+    </div>
+	<div style="margin-bottom: 10px;">	
+	<p class="section" ><b><u>Should I make an election to transfer my accrued benefits?</u></b></p>	
+        <ol start="9">
+            <li>Before you decide to transfer your accrued benefits to another scheme, you should take into
+                  consideration the following factors:
+                  <ol> 
+                    <li type="a"> services of the trustees (e.g. frequency of issuance of benefit statement to members; number of free fund switching per year); </li>
+                    <li type="a"> fees and charges of the funds (for detailed information, please refer to the Fee Comparative Platform on the website of the MPFA or the Summary of Fee Comparative Platform on MPF Funds which can be obtained from the office of the MPFA free of charge);
+                                    
+                        <p>__________________________</p>
+                        <p >Unless the governing rules of the original scheme provide for more frequent transfer out.</p>
+                    </li>
+              </ol>
+            </li>      
+        </ol>
+	</div>
+    
+    <div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 8 / 11</div>
+	<br/>		
+	<div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+    
+	<div style="margin: 15px 0px 15px; font-size:14px;" class="explan">
+    	<ol start="3"> 
+            <li type="a" style="margin-left: 40px;"> the range of fund choices offered by the schemes and in particular whether there are funds available that match what you need; and </li>
+			<li type="a" style="margin-left: 40px;"> if you are currently investing in an MPF guaranteed fund, a transfer of the accrued benefits out of that guaranteed fund may result in some or all of the guarantee conditions not being satisfied; thus affecting your entitlement to the guarantee. Please check the offering document of the original scheme or consult your original trustee for details. </li>
+            <li>For further information about factors to consider when choosing a scheme, please refer to the MPFA's relevant investment education publications or visit the MPFA's website. </li>
+            <li>Before deciding to transfer benefits to a new scheme, you should try to understand as much as you can about the new scheme. The best source of information about the new scheme is in its offering document. Copies of that offering document can be obtained from the new trustee upon request. </li>
+            <li>You should seriously consider all the implications before making any election to transfer your accrued benefits. Your MPF investments are a long-term investment. You should not view a transfer as an opportunity to time the market. A transfer of accrued benefits will always be subject to investment risk due to market fluctuation during the process as the transfer will normally take around 6 to 8 weeks to complete. </li>
+            <li>You might receive advice or inducements from an MPF intermediary2 who would encourage you to join a new scheme. If you are in doubt about the registration status of an MPF intermediary, you may call the MPFA's hotline (tel.: 2918 0102) or check the register of MPF intermediaries available on the MPFA's website. You should also think through any advice you receive and in particular whether it addresses the factors set out in paragraphs (9) and (12) above. </li>
+			</li>
+		</ol>
+        
+        <p class="section"><b><u>How to make an election to transfer?</u></b></p>
+        <ol start="14" class="explan">
+        	
+			<li>If you have made the decision to transfer your accrued benefits to another MPF scheme, please check whether you have an MPF account in the new scheme. If you: </li>
+				<ol> 
+					<li type="a"> <b>already have an MPF account </b>in the new scheme, you should fill in the "Employee Choice Arrangement ("ECA") - Transfer Election Form" (Form MPF(S)-P(P)) and submit it to the new trustee; or </li>
+				 	<li type="a"> <b>have not opened an MPF account</b> in the new scheme, please contact the new trustee to arrange enrolment for you before or at the time when you submit Form MPF(S)-P(P) to the new trustee. 
+				
+				You can obtain Form MPF(S)-P(P) from the new trustee or the MPFA.
+				</li>
+			</ol>	
+			
+            <li>Please note that the accrued benefits derived from your employee mandatory contributions (and if applicable, employee voluntary contributions) during employment can be transferred to<b> an MPF personal account </b>only. They cannot be transferred to another contribution account, which would normally exist if you are concurrently working for more than one employer. </li>
+			<li>Please complete Form MPF(S)-P(P) carefully. If any information provided on Form MPF(S)-P(P) (including the signature) is incorrect or incomplete, the trustees may not be able to process the transfer request. In addition, please <b>DO NOT sign on a blank form </b>to prevent a third party from filling in incorrect information on it as the administration procedures taken by the trustees may not be reversible.
+			
+                __________________________<br />
+                <p >MPF intermediary means a person who is engaged in selling MPF schemes; or advising clients on constituent funds or underlying approved pooled investment funds of MPF schemes.</p>
+			</li>
+		</ol>
+	</div>
+	<div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 9 /11</div>
+	<br/>		
+	<div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+	<br/><!-- p2 -->
+    
+    <div style="margin: 30px 0px 405px; font-size:14px;"><!-- p2 -->
+    	<ol start="17" class="explan">
+            <li>After completing Form MPF(S)-P(P), you should submit it to the new trustee for processing. The normal processing time of transfer is around 6 to 8 weeks. Please refer to the flow chart at page 11 below for the benefits transfer process. </li>
+			<li>You should not submit a transfer request whilst another previously submitted request is still being processed. Otherwise, your transfer request may not be properly processed. </li>
+			<li>As the normal processing time of transfer is around 6 to 8 weeks, the number of fund units shown in your current MPF account on the date you elect to transfer may be different from that as of the date on which the fund units are redeemed. The original trustee will redeem all the fund units in the sub-account(s) you elect to transfer out on the date of redemption and transfer out the redeemed benefits.		</li>
+			<li>According to the Amendment Ordinance 2009, you can only elect to transfer out the accrued benefits derived from your employee mandatory contributions once per calendar year (unless the governing rules of the original scheme provide for more frequent transfer out).<b> The date the new trustee receives the properly completed election form is adopted for counting that quota.</b> You may check that date from the transfer statement issued by your original trustee, or directly consult your original trustee. </li>
+			<li>After your accrued benefits are transferred out from the original scheme, future contributions made by your existing employer (both employer and employee portions) for and on behalf of you will continue to be made to your contribution account with the original trustee. If you want to transfer the benefits derived from the subsequent employee mandatory contributions to your new account in the new scheme, you should make a separate transfer election in the next calendar year (or earlier if the governing rules of the original scheme allow for more frequent transfer out in a calendar year). </li>
+			<li>If you wish to make enquiries or seek assistance in making your election to transfer, please contact your original trustee or new trustee. For general enquiries regarding the Employee Choice Arrangement, you may contact the MPFA via email: mpfa@mpfa.org.hk or hotline: 2918 0102. </li>
+		</ol>
+    </div>
+    
+    <div class="headerbox-bottom"></div>
+	<div class="left">Version 4 – August 2012</div>
+	<div class="right">Page 10 / 11</div>
+    <br/>
+	<div class="left">FORM MPF(S) - P(P)</div>
+	<div class="right">Annex B to IV.3</div>
+	<div class="headerbox-top"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>
+    <div align="center"><img src ="{!#HOSTED_FILE.340570}" height="710px" ></div>
+    <p class="section"><center><b>~END~</b></center></p>
+    </div>
+    
+    <p>_____________________</p>
+ 	<p>"Business day" means any day other than a Saturday, a public holiday, a gale warning day and a black rainstorm warning day.</p>
+
+	<div class="headerbox-bottom"></div>
+	<div class="right">Page 11 /11</div>
+    <div class="left">Version 4 – August 2012</div>
+</div>	
+</body>
+</html>
