@@ -115,12 +115,12 @@ table.hor-zebra th {
 	font-weight: normal;
 	padding: 1px;
 	color: #039;
-	font-size: 7px;
+	font-size: 7px !important;
 }
 table.hor-zebra td {
 	padding: 1px;
 	color: #669;
-	font-size: 7px;
+	font-size: 7px !important;
 }
 .hor-zebra .odd {
 	background: #e2f4fd; 
@@ -200,7 +200,7 @@ td.info {
             </tr>
 			<tr>
             	<td style="vertical-align:top;">Commencement Date</td>
-                <td>{!fund_effective_date_2#value}</td>
+                <td>{!date_established__formatted_#value}</td>
             </tr>
 			<tr>
             	<td>Number of Funds</td>

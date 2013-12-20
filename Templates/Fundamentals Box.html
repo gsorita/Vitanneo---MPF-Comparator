@@ -35,11 +35,11 @@
                                 <td align="right" style="color:#000">{!R182293.fund_type#value}</td>
                             </tr>
                             <tr class="even" style="color:#000">
-                                <td style="color:#000">Management Fee</td>
+                                <td style="color:#000">Mgmt. Fee(%)</td>
                                 <td align="right" style="color:#000">{!R182293.fund_total_management_fee#value}</td>
                             </tr>
                             <tr class="odd" style="color:#000">
-                                <td style="color:#000">Fund Expense Ratio</td>
+                                <td style="color:#000">Expense Ratio(%)</td>
                                 <td align="right" style="color:#000">{!R182293.fund_expense_ratio#value}</td>
                             </tr>
                         </table>
@@ -49,7 +49,7 @@
                         <h3 class="blue" style="margin-top:-5px">Risk Indicator</h3>
                         <table style="margin: 0px; margin-top:-5px;padding: 0px;width:130px;border-collapse:collapse;">
                             <tr>
-                                <td style="background:#e7e7e8;margin: 0px; padding: 0px;">3yr Standard Deviation</td>
+                                <td style="background:#e7e7e8;margin: 0px; padding: 0px;">3yr Standard Deviation (%)</td>
                                 <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3}%</td>
                             </tr>
                         </table>
@@ -181,10 +181,10 @@
                     </div>
                     
                     <div style="margin-top: -15px;">
-                        <h3 class="blue">Fund Performance</h3>
+                        <h3 class="blue">Annualized Performance (% p.a.)</h3>
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Annualised Return (% p.a.)</center></td>
+                            <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Fund</center></td>
                         </tr>
                         <tr class="col odd">
                             <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">1 Month</td>
@@ -206,7 +206,7 @@
                     <div style="margin-top: -19px;">
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" style="background-color:#929292; color:#fff; height: 20px;"><center>{!R182293.index_fund} (% p.a.)</center></td>
+                            <td colspan="5" style="background-color:#929292; color:#fff; height: 20px;"><center>{!R182293.index_fund}</center></td>
                         </tr>
                         <tr class="col odd">
                             <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Month</td>
@@ -227,7 +227,7 @@
                     
                     <div>
                         <h3 class="nomargin blue" style="margin-top: -10px;">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:0{!R182293.cdy#value}|0{!R182293.cdy_i#value}&chs=161x70&chxs=0N*cUSD,990066,6,0,lt|1N*cUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px;"> <!--&chdl=Current|Index-->
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:1{!R182293.cdy#value}|1{!R182293.cdy_i#value}&chs=161x70&chxs=0N*cUSD,990066,6,0,lt|1N*cUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px;"> <!--&chdl=Current|Index-->
     
                         <table style="margin-left:35px; margin-top:-2px;">
                             <tr>
