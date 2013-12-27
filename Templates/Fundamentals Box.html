@@ -225,16 +225,21 @@
                         </table>
                     </div>
                     
-                    <div>
+                    <div style="width: 160px;">
                         <h3 class="nomargin blue" style="margin-top: -10px;">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293.cdy_i#value}&chs=161x70&chxs=0N*cUSD,990066,6,0,lt|1N*cUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px;"> <!--&chdl=Current|Index-->
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293.cdy_i#value}&chs=110x70&chxs=0N*scUSD,990066,6,0,lt|1N*scUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left;"> <!--&chdl=Current|Index-->
     
-                        <table style="margin-left:35px; margin-top:-2px;">
+                        <table class="legend" style="display: block; float: left;">
                             <tr>
-                                <td style="background-color:#bfbfbf;" width="10px"></td>
-                                <td>Current</td>
-                                <td style="background-color:#0000FF;" width="10px"></td>
-                                <td>Index</td>
+                                <td class="color" style="background-color:#bfbfbf;"></td>
+                                <td class="text" width="10">&nbsp;Current</td>
+                            </tr>    
+                            <tr>
+                            	<td colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr>    
+                                <td class="color" style="background-color:#0000FF;"></td>
+                                <td class="text" width="10">&nbsp;Index</td>
                             </tr>
                         </table>
                     </div>
