@@ -27,7 +27,7 @@
                                 <td align="right" style="color:#000">{!R182293.date_opened_formatted}</td>
                             </tr>
                             <tr class="even" >
-                                <td style="color:#000">Fund Size ($):</td>
+                                <td style="color:#000">Fund Size ($m):</td>
                                 <td align="right" style="color:#000">{!R182293.fund_size#value}</td>
                             </tr>
                             <tr class="odd">
@@ -42,14 +42,14 @@
                                 <td align="right" style="color:#000">{!R182293.fund_expense_ratio#value}</td>
                             </tr>
                         </table>
-                        <div style="margin-top:-2px;">
+                        <div style="margin-top:-12px;">
                         <h3 class="blue">Investment Manager</h3>
                         <p style="background:#e7e7e8;width: 130px;">{!R182293.Investment_Managers__c}</p>
                         <h3 class="blue" style="margin-top:-5px">Risk Indicator</h3>
                         <table style="margin: 0px; margin-top:-5px;padding: 0px;width:130px;border-collapse:collapse;">
                             <tr>
                                 <td style="background:#e7e7e8;margin: 0px; padding: 0px;">3yr Standard Deviation (%)</td>
-                                <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3}%</td>
+                                <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3}</td>
                             </tr>
                         </table>
                     </div>
@@ -181,11 +181,11 @@
                         <!--  Second box -->
                         
                         <div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 8) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px; #EVAL[ if (parseFloat("{!R182293.allocation_count}") <= 9.0) { return 'display: none;' }   ]">
-                        	<div class="legend-item" style="background: #0F0;">
+                        	<div class="legend-item">
                             	{!R182293.asset_allocation_column_1#value}
                             </div>
                             
-                            <div class="legend-item" style="background: #0FF;">
+                            <div class="legend-item">
                             	{!R182293.asset_allocation_column_2#value}
                             </div>  
                         </div>              
@@ -218,7 +218,7 @@
                     <div style="margin-top: -19px;">
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" style="background-color:#929292; color:#fff; height: 20px;"><center>{!R182293.index_fund}</center></td>
+                            <td colspan="5" style="background-color:#929292; color:#fff; /* height: 20px; */"><center>{!R182293.index_fund}</center></td>
                         </tr>
                         <tr class="col odd">
                             <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Month</td>
@@ -239,19 +239,19 @@
                     
                     <div style="width: 160px;">
                         <h3 class="nomargin blue" style="margin-top: -10px;">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293.cdy_i#value}&chs=110x70&chxs=0N*scUSD,990066,6,0,lt|1N*scUSD,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left;"> <!--&chdl=Current|Index-->
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293.cdy_i#value}&chs=130x70&chxs=0N*scUSD,990066,6,0,lt|1N*scUSD,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left;"> <!--&chdl=Current|Index-->
     
-                        <table class="legend" style="display: block; float: left;">
+                        <table class="legend" style="display: block; float: left; width: 30px;">
                             <tr>
                                 <td class="color" style="background-color:#bfbfbf;"></td>
-                                <td class="text" width="10">&nbsp;Current</td>
+                                <td class="text" width="4">&nbsp;Fund</td>
                             </tr>    
                             <tr>
                             	<td colspan="2">&nbsp;</td>
                             </tr>
                             <tr>    
                                 <td class="color" style="background-color:#0000FF;"></td>
-                                <td class="text" width="10">&nbsp;Index</td>
+                                <td class="text" width="4">&nbsp;Index</td>
                             </tr>
                         </table>
                     </div>
