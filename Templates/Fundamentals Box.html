@@ -4,9 +4,11 @@
             <table>
                 <tr>
                 <td style="vertical-align: top;">
+                <div style="height:35px;">
                     <div style="background: #4475ac; color: #fff; height: 30px; width: 130px; display: block; padding: 2px; margin-top: 5px; margin-left: 3px;">
                         <center><h2 style="font-size: 9px;margin-top:3px">{!R182293.name#text}</h2></center>
                     </div>
+                </div>
                    <!-- <table width="70px; height:40px;margin-left:4px">
                         <tr style="margin-top:5px;margin-left:4px">
                             <td style="margin-left:4px;" width="35px">{!rating_image2#value}</td>                       
@@ -14,14 +16,15 @@
                         </tr>
                     </table>-->
                     
-                    <div style="margin-top:-2px;">
+                    <div style="margin-top:-2px; max-height:50px; height:50px;">
                         <h3 class="blue">Investment Objective</h3>
-                        <div style="height: 45px; width: 130px;"><p>{!R182293.investment_objective#value}</p></div>
+                        <div style="height: 30px; width: 130px;"><p>{!R182293.investment_objective#value}</p></div>
                     </div>
     
-                    <div style="margin-top:-17px;">
+                   <div style="margin-top:-6px;">
+                    <div style=" height:87px;">
                         <h3 class="blue">Fund Information</h3>
-                        <table class="hor-zebra" style="width: 130px;border-collapse:collapse; margin-bottom:28px;">
+                        <table class="hor-zebra" style="width: 130px;border-collapse:collapse;">
                             <tr class="odd">
                                 <td width="50%" style="color:#000">Launch Date:</td>
                                 <td align="right" style="color:#000">{!R182293.date_opened_formatted}</td>
@@ -34,17 +37,18 @@
                                 <td colspan="2"style="color:#000"><p style="float:left; margin: 0;">Fund Type:</p><p style="float:right !important; margin: 0px -1px 0px 0px;">{!R182293.fund_type#value}</p></td>
                             </tr>
                             <tr class="even" style="color:#000">
-                                <td style="color:#000">Mgmt. Fee(%):</td>
+                                <td style="color:#000">Mgmt Fee (%):</td>
                                 <td align="right" style="color:#000">{!R182293.fund_total_management_fee#value}</td>
                             </tr>
                             <tr class="odd" style="color:#000">
-                                <td style="color:#000">Expense Ratio(%):</td>
+                                <td style="color:#000">FER (%):</td>
                                 <td align="right" style="color:#000">{!R182293.fund_expense_ratio#value}</td>
                             </tr>
                         </table>
-                        <div style="margin-top:-17px;">
+                    </div>
+                        <div style="margin-top:-6px;">
                         <h3 class="blue">Investment Manager</h3>
-                        <p style="background:#e7e7e8;width: 130px;">{!R182293.Investment_Managers__c}</p>
+                        <p style="background:#e7e7e8;width: 130px;">{!R182293.Investment_Managers__c}&nbsp;</p>
                         <h3 class="blue" style="margin-top:-5px">Risk Indicator</h3>
                         <table style="margin: 0px; margin-top:-5px;padding: 0px;width:130px;border-collapse:collapse;">
                             <tr>
@@ -78,12 +82,12 @@
                             margin: 1px 1px 0px 0px; 
                         }
                         .legend .color {
-                            height: 3px;
-                            width: 3px; 
+                            height: 4px;
+                            width: 4px; 
                         }
                         .legend .text{
                             width: 75px;
-                            margin-top: -1px;
+                            margin-top: 0px;
                         }
                         .legend-item {
                             width: 80px;
@@ -93,11 +97,12 @@
                         }
 
                         .color{
-                            height: 3px;
-                            width: 3px; 
+                            height: 4px;
+                            width: 4px; 
                         }
                         </style>
-                        <div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 9) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px; #EVAL[ if (parseInt('{!R182293.allocation_count}') > 9) { return 'display: none;' }   ] height: 95px; margin-top:5px;">
+                        <!--<div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 9) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px; height: 95px; margin-top:5px;">-->
+                        <div class="legend" style="width: 75px; height: 60px; margin-top:5px;">
                             {!R182293.top_8_legend#value} 
                         </div>             
     
@@ -152,19 +157,13 @@
                         <h3 class="nomargin blue" style="margin-top: -11px;">Performance Chart</h3>
                         <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293.cdy_i#value}&chs=165x70&chxs=0N*scUSD,000000,6,0,lt,000000,000000|1N*scUSD,000000,6,0,lt,000000,000000&chds=a&chm=B,bfbfbf,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left;"> <!--&chdl=Current|Index-->
     
-                        <table class="legend" style="display: block; width: 30px; margin-top:1px; margin-left:75px;">
+                        <table class="legend" style="display: block; width: 30px; margin-top:3px; margin-left:65px;">
                             <tr>
-                                <td><div class="color" style="background-color:#bfbfbf;"></div></td>
-                                <td class="text" width="4">&nbsp;Fund</td>
-                            </tr>
-
-                            <tr>
-                                <td colspan="2" height="2px"></td>
-                            </tr>
-
-                            <tr>
-                                <td><div class="color" style="background-color:#0000FF;"></div></td>
-                                <td class="text" width="4">&nbsp;Index</td>
+                                <td><div class="color" style="background-color:#bfbfbf; margin-top:-2px; height:1px;"></div></td>
+                                <td class="text" width="4" style="vertical-align:top;">&nbsp;Fund</td>
+                                <td height="2px">&nbsp;&nbsp;</td>
+                                <td><div class="color" style="background-color:#0000FF; margin-top:-2px; height:1px;"></div></td>
+                                <td class="text" width="4" style="vertical-align:top;">&nbsp;Index</td>
                             </tr>
                         </table>
                     </div>
