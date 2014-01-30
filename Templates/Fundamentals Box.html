@@ -64,7 +64,7 @@
                 <td style="width: 170px;">
                     <div style="height: 93px;">
                         <h3 style="margin-top:3px" class="nomargin blue">Investment Allocation</h3>
-                        <img style="margin-top:-2px;" border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=80x80&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="float: left;"> <!--&chdl=Bonds|Cash|Equity-->
+                        <img style="margin-top:-2px;" border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=500x500&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="float: left;"  width="70" height="70"> <!--&chdl=Bonds|Cash|Equity-->
     
                         <!--{!asset_allocation_legend}-->
                         
@@ -83,26 +83,27 @@
                         }
                         .legend .color {
                             height: 4px;
-                            width: 4px; 
+                            width: 6px; 
                         }
                         .legend .text{
-                            width: 75px;
+                            width: 70px;
                             margin-top: 0px;
                         }
                         .legend-item {
                             width: 80px;
                         }
                         .text{
-                            font-size: 6px !important;                           
+                            font-size: 6px !important;
+                            width: 70px;                         
                         }
 
                         .color{
                             height: 4px;
-                            width: 4px; 
+                            width: 8px; 
                         }
                         </style>
                         <!--<div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 9) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px; height: 95px; margin-top:5px;">-->
-                        <div class="legend" style="width: 75px; height: 60px; margin-top:5px;">
+                        <div class="legend" style="width: 75px; height: 60px; margin-top:1px; margin-left: 3px;">
                             {!R182293.top_8_legend#value} 
                         </div>             
     
@@ -155,15 +156,15 @@
                     
                     <div style="width: 160px; margin-top: -4px;">
                         <h3 class="nomargin blue" style="margin-top: -11px;">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293.cdy_i#value}&chs=165x70&chxs=0N*scUSD,000000,6,0,lt,000000,000000|1N*scUSD,000000,6,0,lt,000000,000000&chds=a&chm=B,bfbfbf,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left;"> <!--&chdl=Current|Index-->
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}|{!R182293._cdy#value}&chs=800x350&chxs=0N*scUSD,000000,20,0,lt,000000,000000|1N*scUSD,000000,20,0,lt,000000,000000&chds=a&chm=B,bfbfbf,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left; width: 165px; height: 60px;"> <!--&chdl=Current|Index-->
     
                         <table class="legend" style="display: block; width: 30px; margin-top:3px; margin-left:65px;">
                             <tr>
                                 <td><div class="color" style="background-color:#bfbfbf; margin-top:-2px; height:1px;"></div></td>
-                                <td class="text" width="4" style="vertical-align:top;">&nbsp;Fund</td>
+                                <td class="text" width="6px" style="vertical-align:top;">&nbsp;Fund</td>
                                 <td height="2px">&nbsp;&nbsp;</td>
                                 <td><div class="color" style="background-color:#0000FF; margin-top:-2px; height:1px;"></div></td>
-                                <td class="text" width="4" style="vertical-align:top;">&nbsp;Index</td>
+                                <td class="text" width="6px" style="vertical-align:top;">&nbsp;Index</td>
                             </tr>
                         </table>
                     </div>
