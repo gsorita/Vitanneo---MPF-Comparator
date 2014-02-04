@@ -1,0 +1,444 @@
+<html>
+<head>
+	<title>HTML Template</title>
+</head>
+<body>	
+<style>
+body{
+	color:#72727f;
+	font-size: 7px;
+	font-family: 'Open Sans', sans-serif !important;
+}
+h1{
+	color:#FFF; 
+	font-size: 20px; 
+	margin: 6px 0px 0px 6px;
+}
+h2{
+	font-size: 9px; 
+	text-align: center;
+}
+.main{
+	width: #EVAL[ (rbv_api.getRelatedIds("R226405", parseInt("{!id}")).length) * 670 ]px;
+	background-repeat: no-repeat; 
+	/*background-image: URL('{!#HOSTED_FILE.975281#url}')*/
+}
+.sel-status{
+	height: 40px; 
+	width: 198px; 
+	background-image: URL('{!#HOSTED_FILE.978275#url}')	
+}
+.sel-status div {
+	margin: 10px 2px 2px 20px;
+	padding-top: 3px;
+	font-size: 13px;
+	width: 95px;
+	float: left;	
+}
+.sel-status div img {
+	width: 20px;
+}
+.bottom-border{
+	height: 40px; 
+	width: 198px; 
+	background-image: URL('{!#HOSTED_FILE.979069#url}')
+}
+.related1{
+	height: #EVAL[ (( {!#LOOP_BEGIN.R226405#310919(1)} {!R226405.max_funds} {!#LOOP_END.R226405} ) * 22 ) + 50]px !important;
+}
+.related2{
+	height: #EVAL[ (( {!#LOOP_BEGIN.R226405#310919(1)} {!R226405.max_funds} {!#LOOP_END.R226405} ) * 22 ) + 50]px !important;
+}
+.container{ 
+	display:block; 
+	padding: 0px; 
+	float:left; 
+	border: 0; 
+	margin:6px 6px;  
+	width: 205px;
+} 
+.current{
+	/*border:1px solid red;	*/
+}
+.titlepage{
+	text-align:top;
+	font-weight:bold;
+	font: 7px 4px Arial,serif;
+	height: 30px;
+	border-right: none;
+	border-left: none;
+	/*border-bottom: 1px solid #ed1c24; 
+	background:#900;*/
+}
+.text, table td{
+	font: 7px 4px Arial,serif;
+	margin:auto;
+	height: 12px;
+	word-wrap: break-word;
+}
+.name{
+	padding-top: 2% 0;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #72727f;
+	color: #72727f;
+	font-weight:bold;
+	text-align:center;
+	font-size: 8px;
+	font-family: Arial,serif;
+	/* background: #666161;  Old browsers */
+}
+.align{
+	margin:32px;
+	padding-left: 3px;
+	border-left: 1px solid #e1e1e1;
+}
+.text td{
+	min-height: 10px;
+}
+.data_table{
+	width: 95%;	
+}
+.data_table th{ 
+	font-weight:bold; 
+	border:1px solid #e1e1e1; 
+	vertical-align:middle; 
+	text-align: center; 
+}
+.data_table td{ 
+	font-weight:normal; 
+	vertical-align:top; 
+}
+.data_table td, .data_table th{
+	font-size: 7px !important;
+	color:#72727f; 
+	padding:2px;
+	border:1px solid #e1e1e1;
+} 
+.right{
+	text-align: right;	
+}
+.left{
+	text-align: left;
+}	
+.fixed{
+	position: fixed;
+}
+.header{
+	top: 0;
+	background-color: #000;
+}
+img.award, img.ratings { 
+	height: 25px; 
+	width: 25px; 
+	margin: 0px 3px; 
+}
+.mid-border {
+	width: 198px;
+	background-image: URL('{!#HOSTED_FILE.979014#url}')	
+}
+
+table td{
+	padding: 0px;
+}
+
+.tall {
+  height: 35px;
+}
+</style>
+<!-- Scheme Information -->
+
+<div id="header" style="width: 100%">
+<img src="{!#HOSTED_FILE.78008185}" width="40px" height="40px"/>
+    <span style="float: left; font-size:9px; vertical-align: top; margin-top: 0px;"><!--{!#TODAY}-->{!generated_date#value}
+    </span>
+        <div class="right" style="vertical-align:top; text-align: right; background-color:#000; color:#fff; width:100%;">
+            <div style="margin:5px; margin-top: -1px;">
+                <span style="font-weight: bolder; font-size: 18px;padding: 0px; ">{!scheme_comparison_text}</span>
+               </div>
+        </div>
+</div>
+</div>
+
+<div class="main"> 
+	<!--<h1 style="color:#000;"></h1>-->
+	<!--{!#LOOP_BEGIN.R226405#181695}-->
+    <div class="container">
+    	<div class="sel-status">
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" == "{!current_scheme#value}") ? "{!#HOSTED_FILE.978949#url}" : "{!#HOSTED_FILE.978513#url}" ) ]">Current</div>
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" != "{!current_scheme#value}") ? "{!#HOSTED_FILE.978951#url}" : "{!#HOSTED_FILE.978950#url}" ) ]">New</div>    
+        </div>
+        <div class="titlepage mid-border">
+            <div align="center"><img src ="{!R226405.provider_logo}" height="40px"></div><br/>
+            <h2>{!R226405.name#text}</h2>
+        </div>
+        <div class="mid-border"><!--  class="fixed header" -->
+            <div class="text">
+                <table style="width: 95%;" align="center">
+                <tr> 
+                    <td style="height: 25px; width: 50%;">MPF Ratings' Scheme Rating:</td>
+                    <td class="align">{!R226405.rating_image_tmp#value}{!R226405.awards_image_tmp#value}</td>
+                </tr>
+                <tr> 
+                    <td style="width: 50%;">Provider Details:</td>
+                    <td class="align">{!R226405.provider_name}</td>
+                </tr>
+                <tr> 
+                    <td>Date Established:</td>
+                    <td class="align">{!R226405.date_established}</td>
+                </tr>
+                <tr>
+                    <td class="tall">Website:</td>
+                    <td class="align tall">{!R226405.website}</td>
+                </tr>
+                <tr> 
+                    <td>Phone:</td>
+                    <td class="align">{!R226405.phone}</td> 
+                </tr>
+                <tr> 
+                    <td>Fax:</td>
+                    <td class="align"> {!R226405.fax} </td>
+                </tr>
+                <tr> 
+                    <td class="tall>Trustee:</td>
+                    <td class="align tall">{!R226405.provider_trustee_name}</td> 
+                </tr>
+                <tr> 
+                    <td class="tall>Address Line 1:</td>
+                    <td class="align tall">{!R226405.address_line_1}</td> 
+                </tr>
+                <tr> 
+                    <td class="tall>Address Line 2:</td>
+                    <td class="align tall">{!R226405.address_line_2}</td> 
+                </tr>
+                </table>
+            </div> 
+        </div>    
+        
+        <div class="mid-border"><!--  class="fixed header" -->
+            <div class="name mid-border"> Scheme Facts</div>
+            <div class="text mid-border">
+                <table style="width: 95%;" align="center">
+                <tr> 
+                    <td style="width: 50%;">Scheme Size:</td>
+                    <td class="align">-</td>
+                </tr>
+                <tr> 
+                    <td>Commencement Date:</td>
+                    <td class="align">{!R348217.fund_effective_date_2#value}</td> 
+                </tr>
+                <tr> 
+                    <td style="width: 50%;">Number of Funds:</td>
+                    <td class="align">{!R348217.no__of_funds}</td>
+                </tr>
+                <tr> 
+                    <td>Trustee:</td>
+                    <td class="align">{!R348217.R182281.trustee_name}</td> 
+                </tr>
+                <tr> 
+                    <td>Member Statements:</td>
+                    <td class="align">{!R348217.Member_Benefit_Statements__c#value}</td>
+                </tr>
+                <tr> 
+                    <td>Member Newsletter:</td>
+                    <td class="align">{!R348217.Member_Newsletter__c#value}</td>
+                </tr>
+                <tr> 
+                    <td>Scheme Architecture:</td>
+                    <td class="align">{!R348217.Architecture__c#value}</td> 
+                </tr>
+                <tr> 
+                    <td>Life Cycle Funds:</td>
+                    <td class="align"> {!R348217.Life_Cycle_Funds__c#value} </td>
+                </tr>
+                <tr> 
+                    <td class="tall>Website:</td>
+                    <td class="align tall">{!R348217.website}</td> 
+                </tr>
+                <tr> 
+                    <td>Contact Phone No.:</td>
+                    <td class="align"> {!R348217.phone__formatted_} </td>
+                </tr>
+                </table>
+            </div>  
+        </div>
+        
+		<div class="bottom-border"></div>
+	</div>  
+    <!--{!#LOOP_END.R226405}-->	
+</div>
+    
+<!-- MPF Ratings Assessment -->
+<div class="main" style="page-break-before:always;"> 
+<div id="header" style="width: 100%">
+<img src="{!#HOSTED_FILE.78008185}" width="40px" height="40px"/>
+    <span style="float: left; font-size:9px; vertical-align: top; margin-top: 0px;"><!--{!#TODAY}-->{!generated_date#value}
+    </span>
+        <div class="right" style="vertical-align:top; text-align: right; background-color:#000; color:#fff; width:31%;">
+            <div style="margin:5px; margin-top: -1px;">
+                {!scheme_comparison_text}
+               </div>
+        </div>
+</div>
+	<!--{!#LOOP_BEGIN.R226405#181695}-->
+    <div class="container">
+    	<div class="sel-status">
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" == "{!current_scheme#value}") ? "{!#HOSTED_FILE.978949#url}" : "{!#HOSTED_FILE.978513#url}" ) ]">Current</div>
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" != "{!current_scheme#value}") ? "{!#HOSTED_FILE.978951#url}" : "{!#HOSTED_FILE.978950#url}" ) ]">New</div>    
+        </div>
+        <div class="titlepage mid-border">
+            <div align="center"><img src ="{!R226405.provider_logo}" height="40px"></div><br/>
+            <h2>{!R226405.name#text}</h2>
+        </div>
+		<div class="name mid-border">MPF Ratings Assessment</div>
+        <div class="text mid-border">
+            <table style="width: 95%;" align="center">
+            <tr> 
+                <td style="width: 50%; font-size: 12px;">Investment</td>
+                <td class="align"><img src="{!R348217.investment#value}" height="12px"></td>
+            </tr>
+            <tr> 
+                <td>Performance</td>
+                <td class="align">{!R348217.performance#value}</td> 
+            </tr>
+            <tr> 
+                <td>Risk Indicator Rating</td>
+                <td class="align">{!R348217.risk_indicator_rating#value}</td>
+            </tr>
+            <tr> 
+                <td>Risk Adjusted Performance</td>
+                <td class="align">{!R348217.risk_adjusted_performance#value}</td>
+            </tr>
+            
+            <tr> 
+                <td style="font-size: 12px;">Fees and Charges</td>
+                <td class="align"><img src="{!R348217.fees_and_charges#value}" height="12px"></td>
+            </tr>
+            <tr> 
+                <td>Stated Management Fee</td>
+                <td class="align">{!R348217.employee_account#value}</td> 
+            </tr>
+            <tr> 
+                <td>Earning to Fee</td>
+                <td class="align">{!R348217.earning_to_fee#value}</td>
+            </tr>
+            <tr> 
+                <td>Fund Expense Variance</td>
+                <td class="align">{!R348217.preserved_account#value}</td>
+            </tr>
+
+            <tr> 
+                <td style="font-size: 12px;">Administration</td>
+                <td class="align"><img src="{!R348217.administration#value}" height="12px"></td>
+            </tr>
+            <tr> 
+                <td>Governance</td>
+                <td class="align">{!R348217.structure_and_service#value}</td> 
+            </tr>
+            <tr> 
+                <td>Employer Servicing</td>
+                <td class="align">{!R348217.employer_servicing#value}</td>
+            </tr>
+            <tr> 
+                <td>Member Servicing</td>
+                <td class="align">{!R348217.member_servicing#value}</td>
+            </tr>
+            
+            <tr> 
+                <td style="font-size: 12px;">Education</td>
+                <td class="align"><img src="{!R348217.education#value}" height="12px"></td>
+            </tr>
+            <tr> 
+                <td>Education tools</td>
+                <td class="align">{!R348217.employer_education#value}</td> 
+            </tr>
+            <tr> 
+                <td>Member advice</td>
+                <td class="align">{!R348217.member_education#value}</td>
+            </tr>
+            <tr> 
+                <td>Use of technology</td>
+                <td class="align">{!R348217.use_of_technology#value}</td>
+            </tr>
+            </table>
+        </div>
+        
+        <div class="name mid-border">What We Say</div>
+        <div class="text mid-border">
+            <table style="width:95%; height: 300px;"  align="center">
+            <tr> 
+                <td style="vertical-align:top; text-align:justify; margin:32px; padding-left: 3px;">{!R348217.what_we_say#value}</td>
+            </tr>
+            </table>
+        </div>
+        
+        <div class="bottom-border"></div>   
+	</div>         		        						              
+	<!--{!#LOOP_END.R226405}-->	
+</div>
+
+<!-- Fund Investment Menu -->
+<div class="main" style="page-break-before:always;"> 
+
+<div id="header" style="width: 100%">
+<img src="{!#HOSTED_FILE.78008185}" width="40px" height="40px"/>
+    <span style="float: left; font-size:9px; vertical-align: top; margin-top: 0px;"><!--{!#TODAY}-->{!generated_date#value}
+    </span>
+        <div class="right" style="vertical-align:top; text-align: right; background-color:#000; color:#fff; width:31%;">
+            <div style="margin:5px; margin-top: -1px;">
+                {!scheme_comparison_text}
+               </div>
+        </div>
+</div>
+	<!--{!#LOOP_BEGIN.R226405#181695}-->
+    <div class="container">
+    	<div class="sel-status">
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" == "{!current_scheme#value}") ? "{!#HOSTED_FILE.978949#url}" : "{!#HOSTED_FILE.978513#url}" ) ]">Current</div>
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" != "{!current_scheme#value}") ? "{!#HOSTED_FILE.978951#url}" : "{!#HOSTED_FILE.978950#url}" ) ]">New</div>    
+        </div>
+        <div class="titlepage mid-border">
+            <div align="center"><img src ="{!R226405.provider_logo}" height="40px"></div><br/>
+            <h2>{!R226405.name#text}</h2>
+        </div>
+		<div class="name mid-border">Fund Investment Menu</div>
+        <div class="text related1 mid-border">
+            {!R226405.related_funds}</strong>
+        </div>
+        <div class="bottom-border"></div>   
+	</div>         		        						              
+	<!--{!#LOOP_END.R226405}-->	
+</div>
+
+
+<!-- Fund Investment Menu -->
+<div class="main" style="page-break-before:always;"> 
+<div id="header" style="width: 100%">
+<img src="{!#HOSTED_FILE.78008185}" width="40px" height="40px"/>
+    <span style="float: left; font-size:9px; vertical-align: top; margin-top: 0px;"><!--{!#TODAY}-->{!generated_date#value}
+    </span>
+        <div class="right" style="vertical-align:top; text-align: right; background-color:#000; color:#fff; width:31%;">
+            <div style="margin:5px; margin-top: -1px;">
+                {!scheme_comparison_text}
+               </div>
+        </div>
+</div>
+	<!--{!#LOOP_BEGIN.R226405#181695}-->
+    <div class="container">
+    	<div class="sel-status">
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" == "{!current_scheme#value}") ? "{!#HOSTED_FILE.978949#url}" : "{!#HOSTED_FILE.978513#url}" ) ]">Current</div>
+        	<div><img src="#EVAL[ ( ("{!R226405.id}" != "{!current_scheme#value}") ? "{!#HOSTED_FILE.978951#url}" : "{!#HOSTED_FILE.978950#url}" ) ]">New</div>    
+        </div>
+        <div class="titlepage mid-border">
+            <div align="center"><img src ="{!R226405.provider_logo}" height="40px"></div><br/>
+            <h2>{!R226405.name#text}</h2>
+        </div>
+		<div class="name mid-border">Investment Performance</div>
+        <div class="text related2 mid-border">
+            {!R226405.related_fund_invesment}
+        </div>
+        <div class="bottom-border"></div>   
+	</div>         		        						              
+	<!--{!#LOOP_END.R226405}-->	
+</div>
+</body>	
+</html>
