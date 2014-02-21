@@ -1,20 +1,23 @@
+//"&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}" + //chart values
+
+
 var counter = 0, others = 0;
 var top8 = [], arrHierarchy;
 
 function main() {
-	var count = 0, limit = 7, ret = "";
+	var count = 0, limit = 7, ret = "&chd=t:";
 	
 	var arr = [
     {name: "Greater China Equity", 				value: getNumber("{!greater_china_equity#value}"),				color: "990000",	index: 0},
     {name: "Asian Equity", 						value: getNumber("{!asian_equity#value}"), 						color: "ff6666",	index: 1},
-	{name: "Australian/New <br>Zealand Equity", 	value: getNumber("{!australian_new_zealand_equity#value}"), 	color: "ffcccc",	index: 2},
+	{name: "Australian/New Zealand<br>Equity", 	value: getNumber("{!australian_new_zealand_equity#value}"), 	color: "ffcccc",	index: 2},
 	{name: "Japan Equity", 						value: getNumber("{!japan_equity#value}"), 						color: "660066",	index: 3},
 	{name: "European Equity", 					value: getNumber("{!european_equity#value}"), 					color: "9999cc",	index: 4},
 	{name: "North American Equity", 			value: getNumber("{!north_american_equity#value}"), 			color: "ccccff",	index: 5},
 	{name: "Other Equity", 						value: getNumber("{!other_equity#value}"), 						color: "000099",	index: 6},
 	{name: "Greater China Bonds", 				value: getNumber("{!greater_china_bonds#value}"), 				color: "0000ff",	index: 7},
 	{name: "Asian Bonds", 						value: getNumber("{!asian_bonds#value}"), 						color: "ccffff",	index: 8},
-	{name: "Australian/New <br>Zealand Bonds", 	value: getNumber("{!australian_new_zealand_bonds#value}"), 		color: "336600",	index: 9},
+	{name: "Australian/New Zealand<br>Bonds", 	value: getNumber("{!australian_new_zealand_bonds#value}"), 		color: "336600",	index: 9},
 	{name: "Japan Bonds", 						value: getNumber("{!japan_bonds#value}"), 						color: "669900",	index: 10},
 	{name: "European Bonds", 					value: getNumber("{!european_bonds#value}"), 					color: "cccc99",	index: 11},
 	{name: "North American Bonds", 				value: getNumber("{!north_american_bonds#value}"), 				color: "666633",	index: 12},
@@ -27,14 +30,14 @@ function main() {
 	arrHierarchy = [
 		{name: "Greater China Equity", 				value: getNumber("{!greater_china_equity#value}"),				color: "990000",	index: 0},
 		{name: "Asian Equity", 						value: getNumber("{!asian_equity#value}"), 						color: "ff6666",	index: 1},
-		{name: "Australian/New <br>Zealand Equity", 	value: getNumber("{!australian_new_zealand_equity#value}"), 	color: "ffcccc",	index: 2},
+		{name: "Australian/New Zealand<br>Equity", 	value: getNumber("{!australian_new_zealand_equity#value}"), 	color: "ffcccc",	index: 2},
 		{name: "Japan Equity", 						value: getNumber("{!japan_equity#value}"), 						color: "660066",	index: 3},
 		{name: "European Equity", 					value: getNumber("{!european_equity#value}"), 					color: "9999cc",	index: 4},
 		{name: "North American Equity", 			value: getNumber("{!north_american_equity#value}"), 			color: "ccccff",	index: 5},
 		{name: "Other Equity", 						value: getNumber("{!other_equity#value}"), 						color: "000099",	index: 6},
 		{name: "Greater China Bonds", 				value: getNumber("{!greater_china_bonds#value}"), 				color: "0000ff",	index: 7},
 		{name: "Asian Bonds", 						value: getNumber("{!asian_bonds#value}"), 						color: "ccffff",	index: 8},
-		{name: "Australian/New <br>Zealand Bonds", 	value: getNumber("{!australian_new_zealand_bonds#value}"), 		color: "336600",	index: 9},
+		{name: "Australian/New Zealand<br>Bonds", 	value: getNumber("{!australian_new_zealand_bonds#value}"), 		color: "336600",	index: 9},
 		{name: "Japan Bonds", 						value: getNumber("{!japan_bonds#value}"), 						color: "669900",	index: 10},
 		{name: "European Bonds", 					value: getNumber("{!european_bonds#value}"), 					color: "cccc99",	index: 11},
 		{name: "North American Bonds", 				value: getNumber("{!north_american_bonds#value}"), 				color: "666633",	index: 12},
@@ -54,28 +57,28 @@ function main() {
 	} count = 0;
 	
 	while (count < arrHierarchy.length) {
-			ret += getHTML(arrHierarchy[count]['name'], arrHierarchy[count]['value'], arrHierarchy[count]['color'], arrHierarchy[count]['index']);
+			ret += getParams(arrHierarchy[count]['name'], arrHierarchy[count]['value'], arrHierarchy[count]['color'], arrHierarchy[count]['index']);	
 	 	count++;
 	}
 	
-	if (others > 0) ret += getHTML('Others', others, "000000", 17);
-	return ret;
+	if (others > 0) ret += getParams('Others', others, "000000", 17);
+	return ret.substr(0,ret.length-1);
 }
 
 function getNumber (myNum){
 	return (isNaN(parseFloat(myNum)) ? 0 : parseFloat(myNum));
 }
 
-function getHTML(name, value, color, index) {
+function getParams(name, value, color, index) {
 	if (top8.indexOf(index) >= 0 || index == 17) {
 		rbv_api.println("===>Top 8:" + name + "," + value + "," + color + "," + index);
 		counter++;
-		return '<div class="legend-item"> <div class="color" style="background-color:#' + color + ';"></div><div class="text">' + name + '</div> </div>'; 
+		return value + ","; 
 	} else {
 		others += arrHierarchy[index]['value']; rbv_api.println('others:' + others);
 		rbv_api.println("Other:" + name + "," + value + "," + color + "," + index);
 		return "";	
-	}
+	}	
 }
 
 main();
