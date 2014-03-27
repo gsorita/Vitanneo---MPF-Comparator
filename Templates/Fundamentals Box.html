@@ -47,7 +47,7 @@
                         <table style="margin: 0px; margin-top:-5px;padding: 0px;width:130px;border-collapse:collapse;">
                             <tr>
                                 <td style="background:#e7e7e8;margin: 0px; padding: 0px;">3yr Standard Deviation (%)</td>
-                                <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3}</td>
+                                <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3_str}</td>
                             </tr>
                         </table>
                     </div>
@@ -74,19 +74,19 @@
                         <tr>
                             <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Fund</center></td>
                         </tr>
-                        <tr class="col odd">
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">1 Month</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">3 Months</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">1 Year</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">3 Years</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">5 Years</td>
+                        <tr class="col odd annual-performance bg-gray">
+                            <td align="center">1 Month</td>
+                            <td align="center">3 Months</td>
+                            <td align="center">1 Year</td>
+                            <td align="center">3 Years</td>
+                            <td align="center">5 Years</td>
                         </tr>
-                        <tr class="col">
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._1_Month#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._3_months#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._1_year#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._3_years#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._5_years#value}&nbsp;</td>
+                        <tr class="col annual-performance bg-white">
+                            <td align="center">{!R182293._1_Month#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_months#value}&nbsp;</td>
+                            <td align="center">{!R182293._1_year#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_years#value}&nbsp;</td>
+                            <td align="center">{!R182293._5_years#value}&nbsp;</td>
                         </tr>
                         </table>
                     </div>
@@ -96,26 +96,26 @@
                         <tr>
                             <td colspan="5" style="background-color:#929292; color:#fff; /* height: 20px; */"><center>{!R182293.index_fund}&nbsp;</center></td>
                         </tr>
-                        <tr class="col odd">
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Month</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >3 Months</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Year</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >3 Years</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >5 Years</td>
+                        <tr class="col odd annual-performance bg-gray">
+                            <td align="center">1 Month</td>
+                            <td align="center">3 Months</td>
+                            <td align="center">1 Year</td>
+                            <td align="center">3 Years</td>
+                            <td align="center">5 Years</td>
                         </tr>
-                        <tr class="col">
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._1_month_index#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._3_months_index#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._1_year_index#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._3_years_index#value}&nbsp;</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._5_years_index#value}&nbsp;</td>
+                        <tr class="col annual-performance bg-white">
+                            <td align="center">{!R182293._1_month_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_months_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._1_year_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_years_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._5_years_index#value}&nbsp;</td>
                         </tr>
                         </table>
                     </div>
                     
                     <div style="width: 160px; margin-top: 13px;">
                         <h3 class="nomargin blue" style="margin-top: -11px;">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}#EVAL[ if ("{!R182293._cdy#value}" != "100") { return '|{!R182293._cdy#value}'; } else { return ''; } ]&chs=800x350&chxs=0N*scUSD,000000,20,0,lt,000000,000000|1N*scUSD,000000,20,0,lt,000000,000000&chxr=1,0,{!R182293.grand_max_monthly_return}&chds=0,{!R182293.grand_max_monthly_return}&chm=B,bfbfbf,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx2#value}&chls=1|3,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left; width: 165px; height: 60px;"> 
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}#EVAL[ if ("{!R182293._cdy#value}" != "100") { return '|{!R182293._cdy#value}'; } else { return ''; } ]&chs=800x350&chxs=0N*scUSD,000000,20,0,lt,000000,000000|1N*scUSD,000000,20,0,lt,000000,000000&chxr=1,{!R182293.grand_min_monthly_return},{!R182293.grand_max_monthly_return}&chds={!R182293.grand_min_monthly_return},{!R182293.grand_max_monthly_return}&chm=B,bfbfbf,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx2#value}&chls=1|3,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left; width: 165px; height: 60px;"> 
     
                         <table class="legend" style="display: block; width: 30px; margin-top:0px; margin-left:65px;">
                             <tr>
