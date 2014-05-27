@@ -1,0 +1,405 @@
+<style>
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+	width: 1170px;
+}
+.header {
+	position: fixed;
+	height: 120px;
+	background: #fff;
+	z-index: 2;
+}
+.title-wrapper {
+	margin-top: 115px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	padding-top: 20px;
+	background: #fff url("{!#HOSTED_FILE.975281}") no-repeat left top;
+	background-size: 100%;
+	-moz-background-size:100%;
+	-webkit-background-size:100%;
+	z-index: 1;
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(  src="{!#HOSTED_FILE.975281}",  sizingMethod='scale');
+ -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="{!#HOSTED_FILE.975281}",sizingMethod='scale')";
+}
+.list-container {
+	margin-top: 205px;
+	position: relative;
+	z-index: 0;
+}
+.sub-footer {
+	display: none;
+}
+.blue-background {
+	position: fixed;
+	z-index: -40 !important;
+	display: none;
+}
+.padd1 {
+	padding: 10px;
+	margin: 0 10px 10px;
+	background: #fafafa;
+	border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	-webkit-border-radius: 4px !important;
+}
+.data_container {
+	box-shadow: 0 0 3px #bbb;
+	-moz-box-shadow: 0 0 3px #bbb;
+	-webkit-box-shadow: 0 0 3px #bbb;
+	border:1px hidden #000;
+	border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	-webkit-border-radius: 4px !important;
+	font-size: 90% !important;
+	padding:0;
+	width: 32.55%;
+	float:left;
+	margin-right: 0%;
+	margin-left: 7px;
+	margin-bottom: 7px;
+	background: #fff;
+}
+.titlepage {
+	text-align:left;
+	font-weight:bold;
+	font-size:16px !important;
+	height:120px;
+	min-height:120px;
+	max-height:120px;
+	padding: 0 5%;
+	overflow-y:hidden;
+	color: #333;
+	background: #fff !important;
+}
+.text {
+	color:#555;
+	text-shadow:2px 2px 1px #FFF;
+	display:table;
+	position:relative;
+	width:100%;
+}
+.name {
+	padding-top: 5%;
+	padding-bottom: 3%;
+	width: 90%;
+	margin-right: 5% !important;
+	color: #333;
+	font-weight:bold;
+	text-align:left;
+	font-size: 14px !important;
+}
+.align {
+	margin:32px;
+	border:1px solid red;
+}
+.left_cont {
+	float:left;
+	clear:left;
+	width:38%;
+	margin-right:1%;
+	position:relative;
+	margin-bottom:8px;
+	color:#555;
+	font-weight:bold;
+	overflow-y:hidden;
+	font-size:90%;
+}
+.right_cont {
+	float:left;
+	clear:right;
+	width:56%;
+	padding-left:3%;
+	position:relative;
+	margin-bottom:8px;
+	overflow-y:hidden;
+}
+.border {
+	width:90%;
+	height:150px;
+	margin:4px;
+	border:3px solid lightblue;
+	background-color:0;
+	padding:5px;
+}
+#rbi_L_R226405, #rbi_F_R226405, #rbi_L_R348217, #rbi_F_R348217 {
+	display:none;
+}
+.cmp_mpf {
+	padding: 3px 15px;
+	font-size: 50% !important;
+	font-weight: bold;
+}
+img.award, img.ratings {
+	height: 50px;
+	margin: 0px 3px;
+}
+.miniframe {
+	min-height:250px;
+	height:250px;
+	max-height: 250px;
+	overflow: auto;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: 1px solid #ddd;
+}
+.miniframe th {
+	line-height: 15px !important;
+}
+.what-we {
+	height: 420px;
+	display: block !important;
+	overflow-y: auto;
+	margin-bottom: 20px;
+}
+.right {
+	text-align: left !important;
+}
+.odd td, .odd th {
+	background: #fff !important;
+	padding: 5px;
+}
+.even td, .even th {
+	background: #edf4fa !important;
+	padding: 5px;
+}
+.title-wrapper .dropdown-menu {
+	top: -15px;
+}
+.report-btn {
+	background: #5db85d !important;
+}
+.compare-btn-wrapper {
+	text-align: center;
+}
+.compare-btn-wrapper li a {
+	cursor: default;
+}
+.data_container.current {
+	box-shadow: 0 0 3px #bbb !important;
+	-moz-box-shadow: 0 0 3px #bbb !important;
+	-webkit-box-shadow: 0 0 3px #bbb !important;
+}
+.compare-btn-wrapper {
+	background: #fff;
+	text-align: center;
+	margin: 0;
+	border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+}
+.compare-btn-wrapper li {
+	width: 45%;
+}
+.compare-btn-wrapper li a {
+	display: block;
+	padding: 20px 10px;
+	font-size: 14px;
+	color: #bbb;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.scheme-btn {
+	background: url("{!#HOSTED_FILE.985978}") no-repeat left top;
+	display: inline-block;
+	height: 26px;
+	width: 27px;
+	position: relative;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.scheme-btn-star {
+	background-position: 0 -30px;
+}
+.scheme-btn-star.active {
+	background-position: 0 0;
+}
+.scheme-btn-new {
+	background-position: -30px -32px;
+}
+.scheme-btn-new.active {
+	background-position: -30px -2px;
+}
+.mini-header {
+	font-size: 14px;
+}
+.tall {
+	height: 35px;
+}
+.taller {
+	height: 60px;
+}
+.bottom-spacer {
+	margin-bottom: 5px !important;	
+}
+</style>
+<script>
+$(document).ready(function(e) {
+	rbf_selectNumber("SELECT R348217 FROM visitor3 WHERE id = {!#CURR_VISIT.id}", function(data) {
+		$('#a_' + data + ' > .titlepage').addClass('current').parent().addClass("current");
+		$('.dropdown-toggle').dropdown();
+		
+		$(".data_container").each(function(){
+		  if($(this).hasClass("current")){
+		    $(this).find(".compare-btn-wrapper .scheme-btn-star").addClass("active");
+		  }
+		  else {
+		    $(this).find(".compare-btn-wrapper .scheme-btn-new").addClass("active");
+		  }
+		});
+	});
+	
+	//for row class 
+	$(".miniframe").each(function(){
+	  var i = "odd";
+	  $("tr", this).each(function(index){
+	    $(this).addClass(i);
+		if(index%2 == 0){
+		  i = "even";
+		}
+		else {
+		  i = "odd";
+		}
+	  });
+	});
+	
+	var arr = [];
+	$(".text-wrapper").each(function(){
+	  arr.push($(this).height());
+	});
+	
+	var newHeight = Math.max.apply(Math, arr);
+	$(".text-wrapper").each(function(){
+	   $(this).css("height",newHeight+"px");
+	});
+});
+
+function report(url) {
+	var popup = window.open(url, '', [
+		'height='+screen.height,
+		'width='+screen.width,
+		'fullscreen=yes'
+	].join(',') ); 
+	popup.moveTo(0,0);	
+}
+</script>
+
+<div class="hidden-name">Compare</div>
+<div class="title-wrapper" style="text-align: left; margin-bottom: 30px;">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span6">
+        <h1>MPF Scheme Comparison</h1>
+      </div>
+      <div class="span6">
+        <div class="float-btn"> <a href="javascript:void(0)" onClick="report('{!pdf_template_2#url}&c={!#CURR_CUSTM.id}');" class="btn btn-primary report-btn" style="margin-right: 10px">Report</a> <a href="{!#PORTAL.77269958.77834955#url}&id={!#CURR_VISIT.id}" class="btn btn-primary" style="margin-right: 5px">Reset</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="list-container">
+  <div style="clear:both;"> {!#LOOP_BEGIN.R226405#181695}
+    <div class="data_container" id="a_{!R226405.id}">
+      <ul class="unstyled inline compare-btn-wrapper">
+        <li><a href="javascript:void(0)"><span class="scheme-btn scheme-btn-star"></span> Set As Current</a></li>
+        <li><a href="javascript:void(0)"><span class="scheme-btn scheme-btn-new"></span> Set as New</a></li>
+      </ul>
+      <div class = "titlepage">
+        <div align="center"><img src ="{!scheme_detail__c.provider_logo}" height="50px"></div>
+        <br/>
+        <div>{!R226405.name#text}</div>
+      </div>
+      <div class='padd1'>
+        <div class="text-wrapper">
+          <div class="text">
+            <div class='left_cont'>MPF Ratings' Scheme Rating and Award(s):</div>
+            <div class="right_cont" style="min-height:120px;"><img class='ratings bottom-spacer' width='50px' height='50px' src='{!#HOSTED_FILE.78008185#url}'>{!scheme_detail__c.rating_image_tmp#value}{!scheme_detail__c.awards_image_tmp#value}</div>
+            <div class='left_cont tall'>Provider:</div>
+            <div class="right_cont tall">{!R226405.provider_name}</div>
+            <div class='left_cont tall'>Trustee:</div>
+            <div class="right_cont tall">{!R226405.provider_trustee_name}</div>
+            <div class='left_cont taller'>Address:</div>
+            <div class="right_cont taller">{!R226405.address_line_1}</div>
+            <div class='left_cont taller'>Address (Other):</div>
+            <div class="right_cont taller">{!R226405.address_line_2}</div>
+            <div class='left_cont tall'>Website:</div>
+            <div class="right_cont tall">{!R226405.website}</div>
+          </div>
+          <div class= "name">Scheme Facts</div>
+          <br>
+          <div class="text">
+            <div class='left_cont'>Scheme Size ($m):</div>
+            <div class="right_cont">{!R226405.scheme_size}</div>
+            <div class='left_cont'>Commencement Date:</div>
+            <div class="right_cont">{!R226405.date_established__formatted_#value}</div>
+            <div class='left_cont'>Number of Fund Classes:</div>
+            <div class="right_cont">{!R226405.no__of_funds}</div>
+            <div class='left_cont'>Scheme Type:</div>
+            <div class="right_cont">{!R226405.Scheme_Type__c}</div>
+            <div class='left_cont'>Member Statements:</div>
+            <div class="right_cont">{!R226405.Member_Benefit_Statements__c#value}</div>
+            <div class='left_cont'>Member Newsletter:</div>
+            <div class="right_cont">{!R226405.Member_Newsletter__c#value}</div>
+            <div class='left_cont'>Scheme Architecture:</div>
+            <div class="right_cont">{!R226405.Architecture__c#value}</div>
+            <div class='left_cont'>Life Cycle Funds:</div>
+            <div class="right_cont">{!R226405.Life_Cycle_Funds__c#value}</div>
+            <div class='left_cont'>Contact Phone No.:</div>
+            <div class="right_cont">{!R226405.Scheme_Phone__c}</div>
+            <div class='left_cont'>Fax:</div>
+            <div class="right_cont">{!R226405.Scheme_Fax__c}</div>
+          </div>
+          <div class= "name">MPF Ratings Assessment</div>
+          <br>
+          <div class="text">
+            <div class='left_cont mini-header'>Investment:</div>
+            <div class="right_cont"><img src="{!R348217.investment#value}" height="35px"></div>
+            <div class='left_cont'>Performance</div>
+            <div class="right_cont">{!R226405.performance#value}</div>
+            <div class='left_cont'>Risk Rating</div>
+            <div class="right_cont">{!R226405.risk_indicator_rating#value}</div>
+            <div class='left_cont'>Risk Adjusted</div>
+            <div class="right_cont">{!R226405.risk_adjusted_performance#value}</div>
+            <div class='left_cont mini-header'>Fees and Charges:</div>
+            <div class="right_cont"><img src="{!R348217.fees_and_charges#value}" height="35px"></div>
+            <div class='left_cont'>Management Fee</div>
+            <div class="right_cont">{!R226405.employee_account#value}</div>
+            <div class='left_cont'>Fund Expense Ratio</div>
+            <div class="right_cont">{!R226405.fund_expense_ratio#value}</div>
+            <div class='left_cont'>Expense Variance</div>
+            <div class="right_cont">{!R226405.preserved_account#value}</div>
+            <div class='left_cont mini-header'>Administration:</div>
+            <div class="right_cont"><img src="{!R348217.administration#value}" height="35px"></div>
+            <div class='left_cont'>Governance</div>
+            <div class="right_cont">{!R226405.structure_and_service#value}</div>
+            <div class='left_cont'>Employer Servicing</div>
+            <div class="right_cont">{!R226405.employer_servicing#value}</div>
+            <div class='left_cont'>Member Servicing</div>
+            <div class="right_cont">{!R226405.member_servicing#value}</div>
+            <div class='left_cont mini-header'>Education:</div>
+            <div class="right_cont"><img src="{!R226405.education#value}" height="35px"></div>
+            <div class='left_cont'>Education Tools</div>
+            <div class="right_cont">{!R226405.member_education#value}</div>
+            <div class='left_cont'>Member Advice</div>
+            <div class="right_cont">{!R226405.employer_education#value}</div>
+            <div class='left_cont'>Use of Technology</div>
+            <div class="right_cont">{!R226405.use_of_technology#value}</div>
+          </div>
+        </div>
+        <div class= "name">What We Say</div>
+        <br>
+        <div class="text what-we"> {!R348217.what_we_say#value} </div>
+        <div class= "name">Fund Investment Menu</div>
+        <br>
+        <div class="padd1 miniframe" style="border-radius: 0 !important;  -moz-border-radius: 0 !important;">{!R226405.related_funds}</div>
+        <br>
+        <div class= "name">Investment Performance</div>
+        <br>
+        <div class="padd1 miniframe" style="border-radius: 0 !important;  -moz-border-radius: 0 !important;">{!R226405.related_fund_invesment}<br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+    {!#LOOP_END.R226405} </div>
+</div>

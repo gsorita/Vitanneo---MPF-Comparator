@@ -33,6 +33,7 @@ table hr{
 }
 #containter {
     width: 100%;
+	page-break-after:always;
 }
 .left {
     float: left;    
@@ -168,38 +169,28 @@ td.info {
 	height: 4px;
 	width: 6px; 
 }
-.legend .text {
+.legend .text{
 	width: 70px;
 	margin-top: 0px;
 }
 .legend-item {
 	width: 80px;
 }
-.text {
+.text{
 	font-size: 6px !important;
 	width: 70px;                         
 }
 
-.color {
+.color{
 	height: 4px;
 	width: 8px; 
 }
-.annual-performance td {
-    border:1px solid #000;
-    width:15%;
-    color:#000   
-}
-.bg-white td {
-    background-color:#fff;
 
-}
-.bg-gray td {
-    background-color:#b6b6b6;
-}
 @page{margin:0}
 </style>    
 </head>
 <body>
+{!#LOOP_BEGIN.all#181695}
 <div id="containter">
 <div>
     <div id="header" style="width: 98.7%">
@@ -227,10 +218,10 @@ td.info {
 
 <hr style="margin-top:-8px; width:98.7%; text-align:left;">
 
-<div class="fit description" style="margin-bottom: 0px; margin-top: -10px; height: 148px;">
+<div class="fit description" style="margin-bottom: 15px; margin-top: -10px;">
     <div style="width: 420px; height: 135px; color: #FFF; border: 0 !important; padding: 10px; background-repeat:no-repeat; background-image: url('{!#HOSTED_FILE.794064}')" class="padder round">
-        <h2 style="font-size: 15px;margin-top:-7px; margin-left:-5px;">What We Say</h2>
-        <div style="margin-top:-9px;font-size: 7px;text-space:0px;font-weight:normal;color:#ffffff; margin-left:-5px;">
+        <h2 style="font-size: 15px;margin-top:-5px; margin-left:-5px;">What We Say</h2>
+        <div style="margin-top:-6px;font-size: 7px;text-space:1px;font-weight:normal;color:#ffffff; margin-left:-5px;">
         {!what_we_say}
         </div>
     </div>
@@ -277,7 +268,7 @@ td.info {
             </tr>
             <tr>
                 <td>Contact Phone No.</td>
-                <td>{!Scheme_Phone__c}</td>
+                <td>{!phone}</td>
             </tr>
         </table>
     </div>
@@ -387,25 +378,25 @@ td.info {
     {!fundamentals_box2#value}
 </div>
 
-<div id="mfpFooter" style="margin-top:-30px; margin-bottom:0; position:fixed;">
+<div id="mfpFooter" style="margin-top:-33px; margin-bottom:0; position:fixed; height: 10px;">
     <table width="99%">
         <tr>
-            <td width="89%" align="right" style="font-size:7px" colspan="2">The information in this report is brought to you by <b>MPF Ratings</b> (<span style="color:#4c82bf;">www.mpfratings.com.hk</span>) and is effective as at {!effective_date_formatted#value}</td>
+            <td width="89%" align="right" style="font-size:5px" colspan="2">The information in this report is brought to you by <b>MPF Ratings</b> (<span style="color:#4c82bf;">www.mpfratings.com.hk</span>) and is effective as at {!effective_date_formatted#value}</td>
              <!--<td width="10%" align="right" style="font-size:7px; color:#4c82bf;">www.mpfratings.com.hk</td>-->
         </tr>
         <tr>
-            <td colspan="2" style="font-size:6px; text-align: justify;"><p style="align:justify"><b>Important: </b><span style="color:#aaa">Any advice provided here is of a general nature and does not take into account your 
+            <td colspan="2" style="font-size:6px; text-align: justify;"><b>Important: </b><span style="color:#aaa">Any advice provided here is of a general nature and does not take into account your 
             individual financial situation, objectives or needs. It is not guaranteed to be accurate or complete. Information 
             has been prepared without taking into account your individual financial objectives, situation or needs. You should, 
             before acting on the information, consider its appropriateness having regard to your own financial objectives, 
             situation and needs and consider obtaining personal financial advice from a financial adviser. Before you make a 
             decision regarding any of the products mentioned, you should obtain and consider a copy of the relevant principal 
-            brochures and fund fact sheet from the product issuer.</span></p></td>
+            brochures and fund fact sheet from the product issuer.</span></td>
         </tr>
     </table>
 </div>
 
 </div>
-
+{!#LOOP_END.all}
 </body>
 </html>

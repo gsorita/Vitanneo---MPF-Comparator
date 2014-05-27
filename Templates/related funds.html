@@ -1,0 +1,33 @@
+<table cellspacing="0" class="data_table" align="center">
+	<!--<tr>
+		<td colspan="3"><div id="chart_div_{!id}" style="width: 100%; height: 230px;"></div>
+	</td>
+	</tr>-->
+	<tr>
+		<th style="width:50%;" >Fund Name</th>
+		<th style="width:20%;">Size ($m)</th>
+		<th style="width:30%;">Management Fee</th>
+	</tr>
+	<!--<script>var chartData_{!id} = []; chartData_{!id}.push(['Name', 'Fund Size', 'Total Management Fee']);</script>-->
+    {!#LOOP_BEGIN.R182293#6380354}
+	<tr>
+		<td class="left">{!R182293.name#text}</td>
+		<td class="right">{!R182293.latest_fund_size#value} </td>
+		<td class="right">{!R182293.latest_FTMF#value} </td>
+	</tr>
+	<!--<script>chartData_{!id}.push([ '{!R182293.name#text}', parseInt('{!R182293.fund_size#value}'), parseInt('{!R182293.fund_total_management_fee#value}') ]);</script>-->
+	{!#LOOP_END.R182293}
+</table>
+<!--
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable( chartData_{!id} );	
+		var options = {'title': ''};		
+		var chart = new google.visualization.LineChart(document.getElementById('chart_div_{!id}'));
+		chart.draw(data, options);
+	}
+</script>
+-->

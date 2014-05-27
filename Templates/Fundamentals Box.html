@@ -1,239 +1,129 @@
 {!#LOOP_BEGIN.R182293#600369(4)}
-        <div class="left" style="margin: 0px; margin-top: -6px; padding: 2px; height: 287px; width:318px; background-size: 320px 284px;background-image: url({!#HOSTED_FILE.1404122#url})">
-        <div class="left" style="margin-left: 6px; height: 270px; width:310px">
+        <div class="left" style="margin: 0px; margin-top: -6px; padding: 2px; height: 279px; width:318px; background-image: url({!#HOSTED_FILE.1404122#url})" style="background-size: 30px 28px">
+        <div class="left" style="margin-left: 6px; height: 270px; width:310px;">
             <table>
                 <tr>
                 <td style="vertical-align: top;">
+                <div style="height:35px;">
                     <div style="background: #4475ac; color: #fff; height: 30px; width: 130px; display: block; padding: 2px; margin-top: 5px; margin-left: 3px;">
                         <center><h2 style="font-size: 9px;margin-top:3px">{!R182293.name#text}</h2></center>
                     </div>
-                   <!-- <table width="70px; height:40px;margin-left:4px">
-                        <tr style="margin-top:5px;margin-left:4px">
-                            <td style="margin-left:4px;" width="35px">{!rating_image2#value}</td>						
-                            <td width="35px">{!awards_image2#value}</td>
-                        </tr>
-                    </table>-->
+                </div>
                     
-                    <div style="margin-top:-2px;">
+                    <div style="margin-top:-2px; max-height:50px; height:50px;">
                         <h3 class="blue">Investment Objective</h3>
-                        <div style="height: 45px; width: 130px;"><p>{!R182293.investment_objective#value}</p></div>
+                        <div style="height: 30px; width: 130px;"><p>{!R182293.investment_objective#value}</p></div>
                     </div>
     
-                    <div style="margin-top:-9px;">
+                   <div style="margin-top:-1px;">
+                    <div style=" height:87px;">
                         <h3 class="blue">Fund Information</h3>
-                        <table class="hor-zebra" style="width: 130px;border-collapse:collapse; margin-bottom:28px;">
+                        <table class="hor-zebra" style="width: 130px;border-collapse:collapse;">
                             <tr class="odd">
-                                <td width="50%" style="color:#000">Launch Date</td>
+                                <td width="50%" style="color:#000">Launch Date:</td>
                                 <td align="right" style="color:#000">{!R182293.date_opened_formatted}</td>
                             </tr>
                             <tr class="even" >
-                                <td style="color:#000">Fund Size ($)</td>
+                                <td style="color:#000">Fund Size ($m):</td>
                                 <td align="right" style="color:#000">{!R182293.fund_size#value}</td>
                             </tr>
                             <tr class="odd">
-                                <td style="color:#000; height:30px;">Fund Type</td>
-                                <td align="right" style="color:#000">{!R182293.fund_type#value}</td>
+                                <td colspan="2"style="color:#000"><p style="float:left; margin: 0;">Fund Type:</p><p style="float:right !important; margin: 0px -1px 0px 0px;">{!R182293.fund_type#value}</p></td>
                             </tr>
                             <tr class="even" style="color:#000">
-                                <td style="color:#000">Management Fee</td>
+                                <td style="color:#000">Mgmt Fee (%):</td>
                                 <td align="right" style="color:#000">{!R182293.fund_total_management_fee#value}</td>
                             </tr>
                             <tr class="odd" style="color:#000">
-                                <td style="color:#000">Fund Expense Ratio</td>
+                                <td style="color:#000">FER (%):</td>
                                 <td align="right" style="color:#000">{!R182293.fund_expense_ratio#value}</td>
                             </tr>
                         </table>
-                        <div style="margin-top:-30px;">
+                    </div>
+                        <div style="margin-top:5px;">
                         <h3 class="blue">Investment Manager</h3>
-                        <p style="background:#e7e7e8;width: 130px;">{!R182293.Investment_Managers__c}</p>
+                        <p style="background:#e7e7e8;width: 130px; text-align: left;">{!R182293.Investment_Managers__c}&nbsp;</p>
                         <h3 class="blue" style="margin-top:-5px">Risk Indicator</h3>
                         <table style="margin: 0px; margin-top:-5px;padding: 0px;width:130px;border-collapse:collapse;">
                             <tr>
-                                <td style="background:#e7e7e8;margin: 0px; padding: 0px;">3yr Standard Deviation</td>
-                                <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3}%</td>
+                                <td style="background:#e7e7e8;margin: 0px; padding: 0px;">3yr Standard Deviation (%)</td>
+                                <td style="background:#e7e7e8;margin: 0px; padding: 0px; width: 10px;">{!R182293.std_dev_3_str}</td>
                             </tr>
                         </table>
                     </div>
+                    
                     </div>
                    
                 </td>
-                <td style="width: 170px; vertical-align: top;">
+                <td style="width: 170px;">
                     <div style="height: 93px;">
                         <h3 style="margin-top:3px" class="nomargin blue">Investment Allocation</h3>
-                        <img border="1" src="https://chart.googleapis.com/chart?cht=p&chd=t:{!R182293.greater_china_equity#value},{!R182293.asian_equity#value},{!R182293.australian_new_zealand_equity#value},{!R182293.japan_equity#value},{!R182293.european_equity#value},{!R182293.north_american_equity#value},{!R182293.other_equity#value},{!R182293.greater_china_bonds#value},{!R182293.asian_bonds#value},{!R182293.australian_new_zealand_bonds#value},{!R182293.japan_bonds#value},{!R182293.european_bonds#value},{!R182293.north_american_bonds#value},{!R182293.other_bonds#value},{!R182293.cash#value},{!R182293.money_markets#value},{!R182293.other_cash_equivalents#value}&chs=#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 8) { return '50x50'; } else { return '73x73'; } ]&chdls=000000,6&chco=990000|ff6666|ffcccc|660066|9999cc|ccccff|000099|0000ff|ccffff|336600|669900|cccc99|666633|999966|ff6600|ffcc33|663300" style="vertical-align:middle; float: left;"> <!--&chdl=Bonds|Cash|Equity-->
+                        <img style="margin-top:-2px;" border="1" src="{!R182293.asset_allocation_chart_parameters#value}" style="float: left;"  width="70" height="70"> 
     
                         <!--{!asset_allocation_legend}-->
                         
-                        <style>
-                        .legend{
-                            float: left;
-                            border-spacing: 2px;
-                            border-collapse: collapse;
-                        }
-						.legend div { 
-							float: left;	
-							display: inline-block;
-						}
-                        .legend .color, #legend .text {
-                            margin: 1px 1px 0px 0px; 
-                        }
-                        .legend .color {
-                            height: 7px;
-                            width: 7px;	
-                        }
-                        .legend .text{
-							font-size: 4px;
-                            width: 42px;
-                        }
-						.legend-item {
-							width: 53px;
-							vertical-align: middle;
-						}
-                        </style>
-                        <div class="legend" style="#EVAL[ var arr = ['{!R182293.greater_china_equity#value}','{!R182293.asian_equity#value}','{!R182293.australian_new_zealand_equity#value}','{!R182293.japan_equity#value}','{!R182293.european_equity#value}','{!R182293.north_american_equity#value}','{!R182293.other_equity#value}','{!R182293.greater_china_bonds#value}','{!R182293.asian_bonds#value}','{!R182293.australian_new_zealand_bonds#value}','{!R182293.japan_bonds#value}','{!R182293.european_bonds#value}','{!R182293.north_american_bonds#value}','{!R182293.other_bonds#value}','{!R182293.cash#value}','{!R182293.money_markets#value}','{!R182293.other_cash_equivalents#value}']; var count = 0, xcount = 0; while (count < arr.length) { if (arr[count] != '0.0') { xcount+=1; } count++; } if (xcount > 8) { return 'width: 110px; '; } else { return 'width: 75px; '; } ] height: 60px;">
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#990000;"></div>
-                                <div class="text">Greater China Equity  #EVAL[ if ('{!R182293.greater_china_equity#value}' != '') { return 'block'; } else { return 'none'; } ]</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.asian_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#ff6666;"></div>
-                                <div class="text">Asian Equity</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.australian_new_zealand_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#ffcccc;"></div>
-                                <div class="text">Australian/New Zealand<br>Equity</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.japan_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#660066;"></div>
-                                <div class="text">Japan Equity</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.european_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#9999cc;"></div>
-                                <div class="text">European Equity</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.north_american_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#ccccff;"></div>
-                                <div class="text">North American Equity</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.other_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#000099;"></div>
-                                <div class="text">Other Equity</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#0000ff;"></div>
-                                <div class="text">Greater China Bonds</div>
-                            </div>
-
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.asian_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#ccffff;"></div>
-                                <div class="text">Asian Bonds</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.australian_new_zealand_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#336600;"></div>
-                                <div class="text">Australian/New Zealand<br>Bonds</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.japan_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#669900;"></div>
-                                <div class="text">Japan Bonds</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.european_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#cccc99;"></div>
-                                <div class="text">European Bonds</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.north_american_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#666633;"></div>
-                                <div class="text">North American Bonds</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.other_bonds#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#999966;"></div>
-                                <div class="text">Other Bonds</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.cash#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#ff6600;"></div>
-                                <div class="text">Cash</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.money_markets#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#ffcc33;"></div>
-                                <div class="text">Money Markets</div>
-                            </div>
-                            
-                            <div class="legend-item" style="display: #EVAL[ if ('{!R182293.greater_china_equity#value}' != '0.0') { return 'block'; } else { return 'none'; } ]">
-                                <div class="color" style="background-color:#663300;"></div>
-                                <div class="text">Other Cash Equivalents</div>
-                            </div>  
-                        </div>               
+                        <div class="legend" style="width: 75px; height: 60px; margin-top:1px; margin-left: 3px;">
+                            {!R182293.top_8_legend#value} 
+                        </div>             
     
                     </div>
                     
-                    <div style="margin-top: -7px;">
-                        <h3 class="blue">Fund Performance</h3>
+                    <div style="margin-top: -9px;">
+                        <h3 class="blue">Annualized Performance (% p.a.)</h3>
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Annualised Return (p.a.)</center></td>
+                            <td colspan="5" width="100%" style="background-color:#929292; color:#fff"><center>Fund</center></td>
                         </tr>
-                        <tr class="col odd">
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">1 Month</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">3 Months</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">1 Year</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">3 Years</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#b6b6b6">5 Years</td>
+                        <tr class="col odd annual-performance bg-gray">
+                            <td align="center">1 Month</td>
+                            <td align="center">3 Months</td>
+                            <td align="center">1 Year</td>
+                            <td align="center">3 Years</td>
+                            <td align="center">5 Years</td>
                         </tr>
-                        <tr class="col">
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._1_Month#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._3_months#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._1_year#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._3_years#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;color:#000;background-color:#fff">{!R182293._5_years#value}</td>
+                        <tr class="col annual-performance bg-white">
+                            <td align="center">{!R182293._1_Month#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_months#value}&nbsp;</td>
+                            <td align="center">{!R182293._1_year#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_years#value}&nbsp;</td>
+                            <td align="center">{!R182293._5_years#value}&nbsp;</td>
                         </tr>
                         </table>
                     </div>
                     
-                    <div>
+                    <div style="margin-top: -9px;">
                         <table class="hor-zebra" style="border-collapse:collapse;border:1px solid #fff">
                         <tr>
-                            <td colspan="5" style="background-color:#929292; color:#fff"><center>{!R182293.index_fund}</center></td>
+                            <td colspan="5" style="background-color:#929292; color:#fff; /* height: 20px; */"><center>{!R182293.index_fund}&nbsp;</center></td>
                         </tr>
-                        <tr class="col odd">
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Month</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >3 Months</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >1 Year</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >3 Years</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#b6b6b6;color:#000" >5 Years</td>
+                        <tr class="col odd annual-performance bg-gray">
+                            <td align="center">1 Month</td>
+                            <td align="center">3 Months</td>
+                            <td align="center">1 Year</td>
+                            <td align="center">3 Years</td>
+                            <td align="center">5 Years</td>
                         </tr>
-                        <tr class="col">
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._1_month_index#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._3_months_index#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._1_year_index#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._3_years_index#value}</td>
-                            <td align="center" style="border:1px solid #000;width:15%;background-color:#fff;color:#000">{!R182293._5_years_index#value}</td>
+                        <tr class="col annual-performance bg-white">
+                            <td align="center">{!R182293._1_month_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_months_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._1_year_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._3_years_index#value}&nbsp;</td>
+                            <td align="center">{!R182293._5_years_index#value}&nbsp;</td>
                         </tr>
                         </table>
                     </div>
                     
-                    <div>
-                        <h3 class="nomargin blue" style="margin: 3px; margin-top:0px">Performance Chart</h3>
-                        <img src="http://chart.googleapis.com/chart?cht=lc&chs=240x150&chd=t:0{!R182293.cdy#value}|0{!R182293.cdy_i#value}&chs=141x70&chxs=0N*cUSD,990066,6,0,lt|1N*cUSD*K,000000,6,0,lt&chds=a&chm=B,990066,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx#value}&chls=1|1,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7"> <!--&chdl=Current|Index-->
+                    <div style="width: 160px; margin-top: 13px;">
+                        <h3 class="nomargin blue" style="margin-top: -11px;">Performance Chart</h3>
+                        <img src="http://chart.googleapis.com/chart?cht=lc&chd=t:{!R182293.cdy#value}#EVAL[ if ("{!R182293._cdy#value}" != "100") { return '|{!R182293._cdy#value}'; } else { return ''; } ]&chs=800x350&chxs=0N*scUSD,000000,20,0,lt,000000,000000|1N*scUSD,000000,20,0,lt,000000,000000&chxr=1,{!R182293.grand_min_monthly_return},{!R182293.grand_max_monthly_return}&chds={!R182293.grand_min_monthly_return},{!R182293.grand_max_monthly_return}&chm=B,bfbfbf,0,0,0|B,bfbfbf,0,0,0&chxt=x,y&chl={!R182293.cdx2#value}&chls=1|3,6,3&chdlp=b&chma=0,0,0,0&chco=bfbfbf,0000FF&chdls=000000,7" style="margin-top: -8px; display: block; float: left; width: 165px; height: 60px;"> 
     
-                        <table style="margin-left:35px; margin-top:-2px;">
+                        <table class="legend" style="display: block; width: 30px; margin-top:0px; margin-left:65px;">
                             <tr>
-                                <td style="background-color:#bfbfbf;" width="10px"></td>
-                                <td>Current</td>
-                                <td style="background-color:#0000FF;" width="10px"></td>
-                                <td>Index</td>
+                                <td><div class="color" style="background-color:#bfbfbf; margin-top:-2px; height:1px;"></div></td>
+                                <td class="text" width="6px" style="vertical-align:top;">&nbsp;Fund</td>
+                                <td height="2px">&nbsp;&nbsp;</td>
+                                <td><div class="color" style="background-color:#0000FF; margin-top:-2px; height:1px;"></div></td>
+                                <td class="text" width="6px" style="vertical-align:top;">&nbsp;Index</td>
                             </tr>
                         </table>
                     </div>
