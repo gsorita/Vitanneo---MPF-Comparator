@@ -1,0 +1,356 @@
+<style>
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 1170px;
+}
+
+.header {
+  position: fixed;
+  height: 120px;
+  background: #fff;
+  z-index: 2;
+}
+
+.title-wrapper {
+  margin-top: 115px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  background: #fff url("{!#HOSTED_FILE.975281}") no-repeat left top;
+  background-size: 100%;
+  -moz-background-size:100%; 
+  -webkit-background-size:100%;
+  z-index: 1;
+
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+  src="{!#HOSTED_FILE.975281}",
+  sizingMethod='scale');
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+  src="{!#HOSTED_FILE.975281}",
+  sizingMethod='scale')";
+}
+
+.list-container {
+  margin-top: 205px;
+  position: relative;
+  z-index: 0;
+}
+
+.sub-footer {
+  display: none;
+}
+
+.blue-background {
+  position: fixed;
+  z-index: -40 !important;
+  display: none;
+}
+
+.blue-background {
+  position: fixed;
+}
+
+.padd1 {
+  padding: 10px;
+  margin: 0 10px 10px;
+  background: #fafafa;
+  border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+}
+
+.data_container {
+  border:1px hidden #000;
+  border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  font-size: 90% !important;
+  padding:0; 
+  width: 32.55%; 
+  float:left; 
+  margin-right: 0%; 
+  margin-left: 7px; 
+  margin-bottom: 7px;
+  background: #fff;
+  box-shadow: 0 0 3px #bbb !important;
+  -moz-box-shadow: 0 0 3px #bbb !important;
+  -webkit-box-shadow: 0 0 3px #bbb !important;
+}
+
+.titlepage {
+  text-align:left;
+  font-weight:bold; 
+  font-size: 16px !important;
+  height:120px; 
+  min-height:120px; 
+  max-height:120px;
+  padding: 0 5%;
+  overflow-y:hidden;
+  color: #333;
+  background: #fff !important;
+}
+
+.text{
+  color:#555; 
+  text-shadow:2px 2px 1px #FFF;
+  display:table;
+  position:relative;
+  width:100%;
+}
+
+.align{
+  margin:32px;
+  border:1px solid red;
+}
+
+.left_cont {
+  float:left; clear:left; width:38%; margin-right:1%; position:relative; margin-bottom:8px; color:#555; font-weight:bold; overflow-y:hidden; font-size:90%;
+}
+
+.right_cont {
+  float:left; clear:right; width:56%; padding-left:3%; position:relative; margin-bottom:8px; overflow-y:hidden;
+}
+
+.border{
+  width:90%;
+  height:150px;
+  margin:4px;
+  border:3px solid lightblue;
+  background-color:0;
+  padding:5px;
+}
+
+#rbi_L_R226405, #rbi_F_R226405, #rbi_L_R348217, #rbi_F_R348217 { display:none; }
+.cmp_mpf { padding: 3px 15px; font-size: 50% !important; font-weight: bold; }
+
+img.award, img.ratings {
+	height: 50px;
+	margin: 0px 2px;
+}
+
+.miniframe { 
+  min-height:250px; 
+  height:250px; 
+  max-height: 250px; 
+  overflow: auto; 
+}
+
+/*NEW*/
+.compare-btn-wrapper {
+  border-radius: 4px 4px 0 0;
+  background: #fff;
+  margin: 0;
+  text-align: center;
+} 
+
+.compare-btn-wrapper li {
+  width: 45%;
+}
+
+.compare-btn-wrapper li a {
+  display: block;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #bbb;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+	  
+.scheme-btn {
+  background: url("{!#HOSTED_FILE.985978}") no-repeat left top;
+  display: inline-block;
+  height: 26px;
+  width: 27px;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.scheme-btn-star {
+  background-position: 0 -30px;
+}
+.scheme-btn-star.active {
+  background-position: 0 0;
+}
+
+.scheme-btn-new {
+  background-position: -30px -32px;
+}
+
+.scheme-btn-new.active {
+  background-position: -30px -2px;
+}
+
+.data_container.selected  {
+  box-shadow: 0 0 3px #00B121;
+  -moz-box-shadow: 0 0 3px #00B121;
+  -webkit-box-shadow: 0 0 3px #00B121;
+}
+
+.data_container.current {
+  box-shadow: 0 0 3px #FF8F00;
+  -moz-box-shadow: 0 0 3px #FF8F00;
+  -webkit-box-shadow: 0 0 3px #FF8F00;
+}
+
+.compare-wrapper {
+  float: left;
+  padding: 5px;
+  margin-top: 15px;
+  height: 81px;
+  margin-left: 35px;
+  color: #000;
+  position: relative;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.compare-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 11px;
+}
+
+.close-ins {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.tall {
+  height: 35px;		
+}
+.bottom-spacer {
+	margin-bottom: 4px !important;	
+}
+</style>
+
+<script>
+var current_scheme;
+var selection = [];
+
+function checkSelection(id,elem_id) {
+  if (id != current_scheme) {  
+    var isSelected = selection.indexOf(id) != -1;
+    
+    if (isSelected) {
+      $("#"+elem_id).removeClass('selected');
+      $("#"+elem_id).find(".scheme-btn-new").removeClass("active");
+      selection.splice( selection.indexOf(id), 1);
+    } else if (selection.length < 2){
+      $("#"+elem_id).addClass('selected');
+      $("#"+elem_id).find(".scheme-btn-new").addClass("active");
+      selection.push(id);
+    } else {
+    	alert("Only 3 Schemes can be compared at a time.");	
+    }
+    //rbf_setFieldValue('R226405', selection.join() );
+	$("#R226405").val( selection.join() );
+  }
+}
+
+function checkCurrent(id) { current_scheme = id;
+  rbf_setFieldValue("R348217", parseInt(id));
+  $("#R348217").val( parseInt(id) );
+  $(".data_container").find(".current").removeClass("selected").parent().removeClass("selected");;
+  $(".data_container").find(".current").removeClass("current").parent().removeClass("current");
+  $("#a_"+ id +" .titlepage").addClass("current").parent().addClass("current");
+  $(".data_container").find(".scheme-btn-star").removeClass("active");
+  $("#a_"+ id).find(".scheme-btn-star").addClass("active");
+}
+
+function submitForm(){
+  $("form[name='theForm']").submit();
+}
+
+$(document).ready(function(e) {
+  $("[name='d']").val('225485');
+  rbf_setFieldValue('R226405','');
+  $("#R226405").val( '' );
+  $('input[type=submit]').first().hide();
+  $("[name='Submission Form Begin'], [name='Submission Form End']").parent().hide();
+  $(".span6.logo").append($(".compare-wrapper"));
+  
+  $(".close-ins").click(function(){
+    if($(".compare-wrapper").hasClass("comp-hide")){
+      $(".compare-wrapper").removeClass("comp-hide");
+	  $(".close-ins").html("x").attr("title","click to hide instructions");
+	   $(".compare-wrapper h5, .compare-wrapper ul").css("visibility","visible");
+	}
+	else{
+      $(".compare-wrapper").addClass("comp-hide");
+	  $(".close-ins").html("show instructions").attr("title","click to show instructions");
+	   $(".compare-wrapper h5, .compare-wrapper ul").css("visibility","hidden");
+	}
+  });
+});
+</script>
+
+<div class="hidden-name">Compare</div>
+<div class="title-wrapper" style="text-align: left; margin-bottom: 30px;">
+  <div class="container">
+    <div class="row-fluid">
+	<div class="span6">
+      <h1>MPF Scheme Comparison</h1>
+	</div>
+	<div class="span6">
+      <div class="float-btn">
+        <a href="javascript:void(0)" onclick="submitForm();" class="btn btn-primary" style="margin-right: 10px">Compare</a>
+	     <a href="{!#PORTAL.77269958.77834955#url}&id={!#CURR_VISIT.id}" class="btn btn-primary" style="margin-right: 5px">Reset</a>
+      </div>
+	</div>
+    </div>
+  </div>
+</div>
+
+<div class="list-container">
+{!#LOOP_BEGIN.all#6385041}
+<div class="data_container" id='a_{!scheme_detail__c.id}'>	
+	<ul class="unstyled inline compare-btn-wrapper">
+	  <li><a onclick="checkCurrent('{!scheme_detail__c.id}');"><span class="scheme-btn scheme-btn-star"></span> Set As Current</a></li>
+	  <li><a onclick="checkSelection('{!scheme_detail__c.id}','a_{!scheme_detail__c.id}');"><span class="scheme-btn scheme-btn-new"></span> Set as New</a></li>
+	</ul>
+	
+	<div class = "titlepage"><!-- p2 -->
+		<div align="center"><img src ="{!scheme_detail__c.provider_logo}" height="50px"></div><br/>
+		<div>{!scheme_detail__c.name#text} </div>
+	</div>
+	
+	<div class="padd1">
+		<div class = "text">
+			<div class="left_cont">MPF Ratings' Scheme Rating and Award(s):</div>
+			<div class="right_cont" style="min-height: 120px;"><img class='ratings bottom-spacer' width='50px' height='50px' src='{!#HOSTED_FILE.78008185#url}'>{!scheme_detail__c.rating_image_tmp#value}{!scheme_detail__c.awards_image_tmp#value}</div>
+			
+			<div class="left_cont tall">Provider:</div>
+			<div class="right_cont tall">{!scheme_detail__c.provider_name}</div>
+			
+			<div class="left_cont">Chinese Name:</div>
+			<div class="right_cont">{!scheme_detail__c.Scheme_Name_Chinese__c#value}</div>
+			
+			<div class="left_cont">Scheme Type:</div>
+			<div class="right_cont">{!scheme_detail__c.Scheme_Type__c#value}</div>
+			
+			<div class="left_cont">Scheme Status:</div>
+			<div class="right_cont">{!scheme_detail__c.Scheme_Status__c#value}</div>
+		</div>
+	</div>
+</div>
+{!#LOOP_END.all}
+</div>
+
+<div class="compare-wrapper">
+  <span class="close-ins" title="hide instructions">x</span>
+  <h5>Instructions</h5>
+  <ul>
+    <li>Select a scheme to compare by clicking its box icons.</li>
+    <li>A check icon will indicate a selected scheme.</li>
+    <li>Once selection is done, click the compare button to view the results</li>
+  </ul>
+</div>
